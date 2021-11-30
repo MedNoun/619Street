@@ -1,0 +1,54 @@
+@import "../../styles.scss";
+nav {
+  font-size: $fs_medium;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px min(8vw, 300px);
+  }
+  .brand {
+    font-family: "sprite";
+  }
+}
+.nav-items {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 15vh;
+  flex-wrap: wrap;
+  overflow: hidden;
+  color: $col_white;
+  z-index: 2;
+}
+.nav-item {
+  margin: 1.5rem auto 0rem 15vw;
+  font-size: $fs_medium;
+}
+.unvisible {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+canvas {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+i.nav-item {
+  margin-right: 0vw;
+  margin-top: 0;
+}
+.items {
+  display: flex;
+  width: 15vw;
+  justify-content: space-between;
+}
+
+.bucket img {
+  width: $fs_medium;
+}

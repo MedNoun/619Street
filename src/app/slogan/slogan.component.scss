@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+One&display=swap");
+
+.slogan-container {
+  /*position: absolute;*/
+  margin-top: 4vh;
+  flex-direction: column;
+  top: 15%;
+  left: 40%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.slogan {
+  letter-spacing: 17.4px;
+  margin-bottom: 0;
+}
+.digital-mall {
+  left: 0;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.logo-name {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  animation: MoveInLeft 4s 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.presentation {
+  position: relative;
+  left: 39%;
+  font-size: 15px;
+  text-align: center;
+
+  justify-content: center;
+  width: 400px;
+}
+.discover-more {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  background-image: url("../../assets/Icons/discoverMore.png");
+  background-repeat: no-repeat;
+  opacity: 1;
+  width: 410px;
+  height: 150px;
+  transform: translateX(-180px);
+}
+a:link {
+  text-decoration: none;
+  transform: translateY(-300px);
+}
+a {
+  color: azure;
+  border-color: azure;
+  border-style: solid;
+  padding: 10px;
+  animation: MoveInBottom 0.7s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  font-size: 1rem;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+.discover-more__text {
+  transform: translate(-20px, 60px);
+}
+
+@keyframes MoveInLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes MoveInRight {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
