@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "sprite";
+  src: url("assets/fonts/SpriteGraffiti-Regular.ttf");
+}
+@font-face {
+  font-family: "36days";
+  src: url("assets/fonts/36Days-Regular.ttf");
+}
+$fs_small: clamp(1.2rem, calc(1.5vw + 1rem), 1.7rem);
+$fs_medium: clamp(1.5rem, calc(1.5vw + 1rem), 2.5rem);
+$fs_large: clamp(6rem, calc(1.5vw + 1rem), 12rem);
+$col_black: #222831;
+$col_grey: #393e46;
+$col_blue: #00adb5;
+$col_white: #e4e4e4;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  color: $col_black;
+  background-color: $col_white;
+}
