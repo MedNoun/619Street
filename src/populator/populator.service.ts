@@ -1,19 +1,21 @@
-import { Injectable } from '@nestjs/common';
-import { CreatePopulatorDto } from './dto/create-populator.dto';
-import { UpdatePopulatorDto } from './dto/update-populator.dto';
+import { Injectable } from "@nestjs/common";
+import { CreatePopulatorDto } from "./dto/create-populator.dto";
+import { UpdatePopulatorDto } from "./dto/update-populator.dto";
+import { RepositoryService } from "./repository/repository.service";
 
 @Injectable()
 export class PopulatorService {
+  constructor(private readonly repository: RepositoryService) {}
   create(createPopulatorDto: CreatePopulatorDto) {
-    return 'This action adds a new populator';
+    return "This action adds a new populator";
   }
 
   findAll() {
     return `This action returns all populator`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} populator`;
+  findOne(id: string) {
+    return this.repository.findOne(id);
   }
 
   update(id: number, updatePopulatorDto: UpdatePopulatorDto) {
