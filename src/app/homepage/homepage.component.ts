@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { content } from '../classes/fetchers/homepage/content';
+import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
     selector: 'app-homepage',
@@ -6,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-    constructor() {}
-
+    public content: content = {
+        slogan: {
+            title: 'blah',
+            subtitle: 'bigblah',
+            paragraphTitle: 'doubleblah',
+            paragraph: 'midium blah'
+        }
+    };
+    constructor(private api: ApiService) {
+        api.getHomepage().subscribe((value) => {
+            this.content = value;
+        });
+    }
     ngOnInit(): void {}
 }
