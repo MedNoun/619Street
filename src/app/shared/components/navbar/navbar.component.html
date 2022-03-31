@@ -1,16 +1,12 @@
 <canvas class="unvisible"></canvas>
 <div class="nav-items unvisible">
     <i class="fas fa-times nav-item"></i>
-    <li class="nav-item">Homme</li>
-    <li class="nav-item">NewCollection</li>
-    <li class="nav-item">SummerCollection</li>
-    <li class="nav-item">Femme</li>
-    <li class="nav-item">Autre</li>
+    <li class="nav-item" *ngFor="let item of navbar.items">{{ item }}</li>
 </div>
 <header>
     <nav>
         <ul>
-            <li class="brand">619 Street</li>
+            <li class="brand">{{ navbar.brand }}</li>
 
             <div class="items">
                 <div class="user-icon">

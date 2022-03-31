@@ -8,14 +8,7 @@ import { ApiService } from '../datafetcher/service/api.service';
     styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-    public content: content = {
-        slogan: {
-            title: 'blah',
-            subtitle: 'bigblah',
-            paragraphTitle: 'doubleblah',
-            paragraph: 'midium blah'
-        }
-    };
+    public content: content;
     constructor(private api: ApiService) {
         api.getHomepage().subscribe((value) => {
             this.content = value;

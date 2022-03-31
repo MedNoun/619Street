@@ -7,12 +7,7 @@ import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
     styleUrls: ['./slogan.component.scss']
 })
 export class SloganComponent implements OnInit {
-    @Input('slogan') slogan: slogan = {
-        title: 'blah',
-        subtitle: 'bigblah',
-        paragraphTitle: 'doubleblah',
-        paragraph: 'midium blah'
-    };
+    @Input('slogan') slogan: slogan;
     constructor() {}
 
     ngOnInit(): void {}

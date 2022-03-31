@@ -1,2 +1,4 @@
-export class Navbar {
+export interface Navbar {
+    brand: string;
+    items: string[];
 }
