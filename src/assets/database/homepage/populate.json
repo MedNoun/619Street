@@ -4,5 +4,28 @@
         "subtitle": "Just Lik",
         "paragraphTitle": "Digital Mall",
         "paragraph": "My name is mohamed sahnoun and angular has fucked me"
-    }
+    },
+    "cards": [
+        {
+            "id": "nike",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike2",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike3",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        }
+    ]
 }

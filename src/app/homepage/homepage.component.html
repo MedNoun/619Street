@@ -1,3 +1,5 @@
 <app-navbar [navbar]="content.navbar"></app-navbar>
 <app-slogan [slogan]="content.slogan"></app-slogan>
-<app-card></app-card>
+<div class="cards flex center">
+    <app-card *ngFor="let item of content.cards" [card]="item"></app-card>
+</div>

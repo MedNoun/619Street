@@ -2,29 +2,29 @@
     <div class="container">
         <div class="card">
             <div class="imgBx">
-                <img
-                    src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png"
-                    alt="nike-air-shoe"
-                />
+                <img src="{{ card.url }}" alt="nike-air-shoe" />
             </div>
 
             <div class="contentBx">
-                <h6>Nike Shoes</h6>
+                <h6>{{ card.name }}</h6>
 
                 <div class="size">
                     <h3>Size :</h3>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
+                    <span *ngFor="let item of card.sizes">{{ item }}</span>
                 </div>
 
                 <div class="color">
                     <h3>Color :</h3>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span
+                        *ngFor="let item of card.colors"
+                        [style.background-color]="item"
+                    ></span>
                 </div>
+                <div class="price">
+                    <h3>Price :</h3>
+                    <span>{{ card.price }}</span>
+                </div>
+                <div class="button"><a href="">Buy Now</a></div>
             </div>
         </div>
     </div>
