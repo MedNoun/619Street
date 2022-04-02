@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Navbar } from 'src/app/classes/fetchers/shared/navbar';
+import { navbar } from 'src/app/classes/fetchers/shared/navbar';
 
 @Component({
     selector: 'app-navbar',
@@ -7,7 +7,7 @@ import { Navbar } from 'src/app/classes/fetchers/shared/navbar';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-    @Input('navbar') navbar: Navbar;
+    @Input('navbar') navbar: navbar;
     constructor() {}
     ngOnInit(): void {}
 }
