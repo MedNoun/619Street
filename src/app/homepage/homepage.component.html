@@ -1,9 +1,9 @@
 <app-navbar class="navbar" [navbar]="content.navbar"></app-navbar>
 <app-slogan class="slogan" [slogan]="content.slogan"></app-slogan>
-
-<div class="featured three">
-    <h1 class="title container">Featured</h1>
-    <div class="cards container flex center wrap">
+<div class="container featured">
+    <app-style01 class="title" text="featured"></app-style01>
+    <div class="cards flex center wrap">
         <app-card *ngFor="let item of content.cards" [card]="item"></app-card>
     </div>
 </div>
+
