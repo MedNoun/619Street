@@ -4,5 +4,65 @@
         "subtitle": "Just Lik",
         "paragraphTitle": "Digital Mall",
         "paragraph": "My name is mohamed sahnoun and angular has fucked me"
-    }
+    },
+    "navbar": {
+    	"brand":"619Street",
+    	"items":["Homme","Femme","New Collection"]
+    },
+    "cards": [
+        {
+            "id": "nike",
+            "name":"blow",
+            "type":"sneakers",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike2",
+            "name":"nikee",
+            "type":"sneakers",
+            "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike3",
+            "name":"nikee",
+            "type":"sneakers",
+            "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike3",
+            "name":"nikee",
+            "type":"sneakers",
+            "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5446.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike3",
+            "name":"nikee",
+            "type":"sneakers",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        },
+        {
+            "id": "nike3",
+            "name":"nikee",
+            "type":"sneakers",
+            "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+            "price": 35,
+            "sizes": [7, 8, 9, 10],
+            "colors": ["green", "blue", "yellow"]
+        }
+    ]
 }
