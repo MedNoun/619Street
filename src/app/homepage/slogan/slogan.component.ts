@@ -9,6 +9,5 @@ import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 export class SloganComponent implements OnInit {
     @Input('slogan') slogan: slogan;
     constructor() {}
-
     ngOnInit(): void {}
 }
