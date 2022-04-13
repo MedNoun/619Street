@@ -11,8 +11,8 @@
     border-radius: 30px;
     width: 100%;
     align-self: stretch;
-    background-image: url("../../../../assets/categories/pantaton.jpeg");
-    background-color: #cbc9cb;
+    
+    background-color: #6f6b6f;
     height: 400px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -27,7 +27,6 @@
     &>div{
         border-radius: 30px;
         flex : 1 ;
-        background-image: url("../../../../assets/categories/sweat.jpeg");
         height :500px;
         background-position: center;
         background-repeat: no-repeat;
@@ -45,7 +44,7 @@
     .isPopular {
         width: 20px;
         height: 20px;
-        color: black;
+       
     }
 }
 

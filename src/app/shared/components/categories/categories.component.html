@@ -1,5 +1,8 @@
 <div class="categoriesContainer">
-    <div class="top">
+    <div
+        class="top"
+        [ngStyle]="{ 'background-image': 'url(' + firstOfContent.url + ')' }"
+    >
         <div class="popularity">
             <img
                 class="isPopular"
@@ -10,8 +13,11 @@
         </div>
     </div>
     <div class="under-top">
-        <div></div>
-        <div></div>
+        <div
+            *ngFor="let item of content"
+            [ngStyle]="{
+                'background-image': 'url(' + item.url + ')'
+            }"
+        ></div>
     </div>
-   
 </div>
