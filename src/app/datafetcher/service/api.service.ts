@@ -25,4 +25,7 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
+    getCategories(): Observable<any> {
+        return this.http.get<content>(this.Url + '/categoriepage');
+    }
 }
