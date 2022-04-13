@@ -18,7 +18,7 @@ export class ApiService {
                     `body was: ${error.error}`
             );
         }
-        return throwError('Something bad happened; please try again later.');
+        throw Error('Something bad happened; please try again later.');
     }
     getHomepage(): Observable<any> {
         return this.http

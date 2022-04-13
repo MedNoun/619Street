@@ -139,7 +139,7 @@ var gooSlider = function (parent, id) {
     };
     loop(); // start the animation
 };
-$(document).ready(function () {
+jQuery(function () {
     var slider = new gooSlider("body");
     var l1, l2;
     $(".fa-bars").on("click", function () {
