@@ -30,6 +30,9 @@ let PopulatorController = class PopulatorController {
     findOne(id) {
         return this.populatorService.findOne(id);
     }
+    findCategorieContent() {
+        return this.populatorService.findCategoriePageContent();
+    }
     update(id, updatePopulatorDto) {
         return this.populatorService.update(+id, updatePopulatorDto);
     }
@@ -57,6 +60,12 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PopulatorController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Get)("/categoriepage"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PopulatorController.prototype, "findCategorieContent", null);
 __decorate([
     (0, common_1.Patch)(":id"),
     __param(0, (0, common_1.Param)("id")),

@@ -7,6 +7,7 @@ export declare class PopulatorController {
     create(createPopulatorDto: CreatePopulatorDto): string;
     findAll(): string;
     findOne(id: string): any;
+    findCategorieContent(): void;
     update(id: string, updatePopulatorDto: UpdatePopulatorDto): string;
     remove(id: string): string;
 }

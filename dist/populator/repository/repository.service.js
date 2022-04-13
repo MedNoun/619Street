@@ -27,6 +27,9 @@ let RepositoryService = class RepositoryService {
     findOne(id) {
         return this.readJson(id, "populate");
     }
+    findCategoriePageContent() {
+        this.readJson("categoriepage", "populate");
+    }
 };
 RepositoryService = __decorate([
     (0, common_1.Injectable)(),

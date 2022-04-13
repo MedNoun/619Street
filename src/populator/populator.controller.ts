@@ -29,7 +29,10 @@ export class PopulatorController {
   findOne(@Param("id") id: string) {
     return this.populatorService.findOne(id);
   }
-
+  @Get("/categoriepage")
+  findCategorieContent(){
+    return this.populatorService.findCategoriePageContent()
+  }
   @Patch(":id")
   update(
     @Param("id") id: string,

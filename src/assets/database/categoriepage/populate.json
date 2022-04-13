@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "title": "sweat",
+      "popular": "true",
+      "url": "../../../../assets/categories/pantaton.jpeg"
+    },
+    {
+      "title": "pantalon",
+      "popular": "false",
+      "url": "../../../../assets/categories/sweat.jpeg"
+    },
+    {
+      "title": "espadrilles",
+      "popular": "false",
+      "url": "../../../../assets/categories/sweat.jpeg"
+    }
+  ]
+}

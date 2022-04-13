@@ -18,4 +18,7 @@ export class RepositoryService {
   findOne(id: string) {
     return this.readJson(id, "populate");
   }
+  findCategoriePageContent() {
+    this.readJson("categoriepage", "populate");
+  }
 }
