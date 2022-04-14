@@ -79,7 +79,7 @@ var gooSlider = function (parent, id) {
                             waves[i].settings.maxSpeed; // add the "speed" of that drop to the y position
 
                     points.push({
-                        // add this point to be animated
+                        // add this panime.jsanime.jsoint to be animated
                         x: dripDist * c,
                         y: waves[i].drips[c]
                     });

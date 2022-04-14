@@ -2,6 +2,31 @@
 .container {
     margin-top: 5vh;
     height: 75vh;
+    .back {
+        position: relative;
+        height: inherit;
+        width: 50vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-image: url("../../../assets/Icons/discoverMore.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        .button {
+            position: absolute;
+            font-size: $fs-medium;
+            text-transform: uppercase;
+            padding: 4px 30px;
+            color: $col_white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
     .container {
         position: relative;
         margin-left: 0;
@@ -22,31 +47,6 @@
         &.img {
             height: clamp(100px, calc(100px + 5vw), 600px);
             text-align: center;
-        }
-        .back {
-            position: absolute;
-            height: inherit;
-            width: 50vw;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-image: url("../../../assets/Icons/discoverMore.png");
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            .button {
-                position: absolute;
-                font-size: $fs-medium;
-                text-transform: uppercase;
-                padding: 4px 30px;
-                color: $col_white;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                &:hover {
-                    cursor: pointer;
-                }
-            }
         }
     }
 }

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
 
 @font-face {
     font-family: "sprite";
@@ -10,8 +11,8 @@
     font-family: "36days";
     src: url("assets/fonts/36Days-Regular.ttf");
 }
-$fs_small: clamp(0.8rem, calc(1.5vw + 1rem), 1.5rem);
-$fs_medium: clamp(1.5rem, calc(1.5vw + 1rem), 2.5rem);
+$fs_small: clamp(0.8rem, calc(1.5vw + 1rem), 1rem);
+$fs_medium: clamp(2rem, calc(1.5vw + 1rem), 3.5rem);
 $fs_large: clamp(2em, calc(9 / 80 * 100vw), 4em);
 $col_black: #222831;
 $col_grey: #393e46;
@@ -27,6 +28,7 @@ $marg_site: min(8vw, 150px);
 body {
     color: $col_black;
     background-color: $col_white;
+    font-family: "Roboto", sans-serif;
     font-size: $fs_small;
 }
 .unvisible {
@@ -57,6 +59,9 @@ body {
     &.space-evenly {
         justify-content: space-evenly;
     }
+}
+.section {
+    height: 100vh;
 }
 
 @media (max-width: 900px) {

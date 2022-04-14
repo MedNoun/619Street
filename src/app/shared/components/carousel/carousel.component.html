@@ -1,0 +1,40 @@
+<div *ngIf="images && images.length > 0" class="carousel-container">
+    <img
+        *ngFor="let img of images; let i = index"
+        [src]="img.src"
+        [alt]="img.alt"
+        class="fade"
+        [ngClass]="{ 'image-active': selectedIndex === i }"
+    />
+    <div class="text">
+        <div class="title">{{ brand }}</div>
+        <div class="description">{{ description }}</div>
+    </div>
+    <div class="more">
+        <div class="text-2">See more !</div>
+    </div>
+    <div *ngIf="indicators" class="carousel-dot-container">
+        <span
+            class="dot"
+            [ngClass]="{ active: selectedIndex === i }"
+            (click)="selectImage(i)"
+            *ngFor="let item of images; let i = index"
+            class="dot"
+        >
+        </span>
+    </div>
+    <div
+        (click)="selectImage(selectedIndex - 1)"
+        *ngIf="controls"
+        class="btn-carousel btn-prev"
+    >
+        <i class="fas fa-arrow-circle-left icon-carousel icon-prev"> </i>
+    </div>
+    <div
+        (click)="selectImage(selectedIndex + 1)"
+        *ngIf="controls"
+        class="btn-carousel btn-next"
+    >
+        <i class="fas fa-arrow-circle-right icon-carousel icon-next"> </i>
+    </div>
+</div>
