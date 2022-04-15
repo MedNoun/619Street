@@ -11,6 +11,11 @@ import { NavbarComponent } from '../shared/components/navbar/navbar.component';
   ],
   imports: [
     SharedModule,NavbarComponent
-  ]
+  ],
+  exports: [LoginComponent]
 })
 export class LoginModule { }
+
+
+
+

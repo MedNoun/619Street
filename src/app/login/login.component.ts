@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { content } from '../classes/fetchers/homepage/content';
+import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  public content: content;
+  constructor(private api: ApiService) {
+      api.getLogin().subscribe((value) => {
+          this.content = value;
+      });
   }
+  ngOnInit(): void {}
 
 }
