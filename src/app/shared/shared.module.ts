@@ -6,6 +6,7 @@ import { CardComponent } from './components/card/card.component';
 import { Style01Component } from './components/style01/style01.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { BlobComponent } from './components/blob/blob.component';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
         CardComponent,
         Style01Component,
         FooterComponent,
-        CarouselComponent
+        CarouselComponent,
+        BlobComponent
     ],
     imports: [CommonModule, DatafetcherModule],
     providers: [],
