@@ -25,4 +25,9 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
+    getLogin(): Observable<any> {
+        return this.http
+            .get<content>(this.Url + '/login')
+            .pipe(catchError(this.handleError));
+    }
 }
