@@ -15,11 +15,9 @@ export class PopulatorService {
   }
 
   findOne(id: string) {
-    return this.repository.findOne(id);
+    return this.repository.findOnePopulate(id);
   }
-  findCategoriePageContent(){
-    return this.repository.findCategoriePageContent()
-  }
+
   update(id: number, updatePopulatorDto: UpdatePopulatorDto) {
     return `This action updates a #${id} populator`;
   }

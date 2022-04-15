@@ -15,10 +15,7 @@ export class RepositoryService {
     let url: string = "src/assets/database/" + resource + "/" + id + ".json";
     fs.writeFileSync(url, JSON.stringify(data));
   }
-  findOne(id: string) {
+  findOnePopulate(id: string) {
     return this.readJson(id, "populate");
-  }
-  findCategoriePageContent() {
-    this.readJson("categoriepage", "populate");
   }
 }

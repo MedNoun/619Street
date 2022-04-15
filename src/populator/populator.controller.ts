@@ -24,14 +24,10 @@ export class PopulatorController {
   findAll() {
     return this.populatorService.findAll();
   }
-
+  
   @Get(":id")
   findOne(@Param("id") id: string) {
     return this.populatorService.findOne(id);
-  }
-  @Get("/categoriepage")
-  findCategorieContent(){
-    return this.populatorService.findCategoriePageContent()
   }
   @Patch(":id")
   update(
@@ -40,7 +36,6 @@ export class PopulatorController {
   ) {
     return this.populatorService.update(+id, updatePopulatorDto);
   }
-
   @Delete(":id")
   remove(@Param("id") id: string) {
     return this.populatorService.remove(+id);
