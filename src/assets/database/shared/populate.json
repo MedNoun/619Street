@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "brand": "619Street",
+    "items": ["Homme", "Femme", "New Collection"]
+  },
+  "footer": {
+    "logo": "619 Street",
+    "socials": {
+      "id": "socials",
+      "title": "socials",
+      "links": [
+        {
+          "href": "",
+          "text": "fab fa-facebook-f"
+        },
+        {
+          "href": "",
+          "text": "fab fa-twitter"
+        },
+        {
+          "href": "",
+          "text": "fab fa-linkedin-in"
+        },
+        {
+          "href": "",
+          "text": "fab fa-instagram"
+        }
+      ]
+    },
+
+    "adr": {
+      "id": "address",
+      "title": "Office Location",
+      "adresses": [
+        {
+          "icon": "far fa-building",
+          "address": "Los Angeles\nOffice 9B, Sky High Tower, New A Ring Road, Los Angeles"
+        },
+        {
+          "icon": "fas fa-gopuram",
+          "address": "Delhi\nOffice 150B, Behind Sana Gate Char Bhuja Tower, Station Road, Delhi"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "arr": [
+          {
+            "id": "1",
+            "title": "solution",
+            "links": [
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "solution",
+            "links": [
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" }
+            ]
+          },
+          {
+            "id": "3",
+            "title": "solution",
+            "links": [
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" },
+              { "href": "", "text": "App dev" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

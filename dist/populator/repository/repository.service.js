@@ -13,7 +13,9 @@ exports.RepositoryService = void 0;
 const common_1 = require("@nestjs/common");
 const fs = require("fs");
 let RepositoryService = class RepositoryService {
-    constructor() { }
+    constructor() {
+        this.obj = this.readJson("shared", "populate");
+    }
     readJson(resource, id) {
         let url = "src/assets/database/" + resource + "/" + id + ".json";
         const fileContent = fs.readFileSync(url, "utf-8");
@@ -24,11 +26,8 @@ let RepositoryService = class RepositoryService {
         let url = "src/assets/database/" + resource + "/" + id + ".json";
         fs.writeFileSync(url, JSON.stringify(data));
     }
-    findOne(id) {
-        return this.readJson(id, "populate");
-    }
-    findCategoriePageContent() {
-        this.readJson("categoriepage", "populate");
+    findOnePopulate(id) {
+        return Object.assign(Object.assign({}, this.obj), this.readJson(id, "populate"));
     }
 };
 RepositoryService = __decorate([

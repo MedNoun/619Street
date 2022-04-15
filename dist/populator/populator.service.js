@@ -23,10 +23,7 @@ let PopulatorService = class PopulatorService {
         return `This action returns all populator`;
     }
     findOne(id) {
-        return this.repository.findOne(id);
-    }
-    findCategoriePageContent() {
-        return this.repository.findCategoriePageContent();
+        return this.repository.findOnePopulate(id);
     }
     update(id, updatePopulatorDto) {
         return `This action updates a #${id} populator`;
