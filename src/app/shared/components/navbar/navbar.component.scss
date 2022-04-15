@@ -14,10 +14,9 @@ nav {
         margin: 30px $marg_site;
     }
     .brand {
-        position: relative;
-        z-index: 1;
-        color: $col_white;
         font-family: "sprite";
+        color: $col_white;
+        z-index: 1;
     }
 }
 .nav-items {
@@ -28,7 +27,7 @@ nav {
     flex-wrap: wrap;
     overflow: hidden;
     color: $col_white;
-    z-index: 3;
+    z-index: 2;
 }
 .nav-item {
     margin: 1.5rem auto 0rem 15vw;
@@ -43,12 +42,13 @@ i.nav-item {
 }
 .items {
     display: flex;
+    z-index: 1;
     width: 15vw;
     justify-content: space-between;
 }
 
 canvas {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -62,6 +62,6 @@ canvas {
 }
 @media (max-width: 500px) {
     #blob {
-        left: -350px;
+        left: -330px;
     }
 }
