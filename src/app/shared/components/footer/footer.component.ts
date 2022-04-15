@@ -4,7 +4,7 @@ import {
     footer,
     innerRow,
     row
-} from 'src/app/classes/fetchers/homepage/footer';
+} from 'src/app/classes/fetchers/shared/footer';
 
 @Component({
     selector: 'app-footer',

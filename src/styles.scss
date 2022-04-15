@@ -24,6 +24,8 @@ $marg_site: min(8vw, 150px);
     margin: 0;
     text-decoration: none;
     list-style-type: none;
+    position: relative;
+    z-index: 1;
 }
 body {
     color: $col_black;
@@ -67,6 +69,11 @@ body {
 @media (max-width: 900px) {
     .items {
         flex-grow: 0.25;
+    }
+}
+@media (max-width: 578px) {
+    .user-icon {
+        color: $col_white;
     }
 }
 @media (max-width: 500px) {

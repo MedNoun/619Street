@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { navbar } from 'src/app/classes/fetchers/shared/navbar';
 
 @Component({
@@ -8,6 +8,7 @@ import { navbar } from 'src/app/classes/fetchers/shared/navbar';
 })
 export class NavbarComponent implements OnInit {
     @Input('navbar') navbar: navbar;
+
     constructor() {}
     ngOnInit(): void {}
 }
