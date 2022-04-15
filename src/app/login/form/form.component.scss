@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+header {
+  margin: 0 0 20px 0;
+  background-color: white;
+  text-align:left;
+}
+html,body{
+  height: 100%;
+  background-color: white;
+}
+
+header h3{
+  color: black;
+
+}
+header h1{
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 601px) {
+  #loginForm{
+    margin-top:-50px;
+    width: 300px;
+  }
+  header h3 {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    color: red;
+  }
+  header h1 {
+    font-size: 26px;
+    margin-left: 10px;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width:1200px) {
+  #loginForm{
+    margin-top:-50px;
+    width: 400px;
+  }
+  header h3 {
+    font-size: 15px;
+    margin-left:60px;
+    margin-bottom: 30px;
+    color:blue;
+  }
+  header h1 {
+    font-size: 30px;
+    margin-left:60px;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width:1500px) {
+  #loginForm{
+    margin-top:-200px;
+    width: 600px;
+    margin-left:-100px;
+  }
+  header h3 {
+    font-size: 15px;
+    margin-left:250px;
+    margin-bottom: 30px;
+    color:green;
+  }
+  header h1 {
+    font-size: 30px;
+    margin-left:200px;
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #loginForm{
+    margin-top:200px;
+    width: 200px;
+  }
+  header h3 {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color:mistyrose;
+  }
+  header h1{
+    font-size: 23px;
+    margin-left: 10px;
+
+  }
+}
+
+.input-group-prepend span{
+  width: 50px;
+  background-color:#393e46;
+  color: white;
+}
+
+input:focus{
+  box-shadow: 0 0 0 0 ;
+
+}
+input{
+  width: 20px;
+  background-color: #d2d2d2;
+  color:white;
+}
+
+.remember{
+  color: black;
+}
+
+.remember input
+{
+  width:20px;
+  height:20px;
+  margin-left:9%;
+  margin-right:2%;
+}
+
+.login_btn{
+  color: white;
+  background-color:#393e46;
+  width: 100%;
+  margin-top: 10%;}
+
+.login_btn:hover{
+  color: black;
+  background-color: white;
+}
+.register_btn{
+  color: black;
+  background-color:white;
+  width: 100%;
+  margin-top: 10%;
+border-color: #222831}
+
+.register_btn:hover{
+  color: white;
+  background-color:black;
+}
+
+.links{
+  color: white;
+}
+
+.links a{
+  margin-left: 4%;
+}
+.container{
+  height: 30%;
+  margin-top:20%;
+  margin-bottom: auto;
+  width: 30%;
+  background-color:white;
+}
