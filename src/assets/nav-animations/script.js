@@ -40,8 +40,8 @@ var gooSlider = function (parent, id) {
             callback: call,
             defaults: {
                 color: "#99db81",
-                minSpeed: 4,
-                maxSpeed: 4
+                minSpeed: 1.2,
+                maxSpeed: 1.2
             },
             settings: {}
         };
@@ -160,10 +160,10 @@ jQuery(function () {
         setTimeout(() => {
             $("canvas").addClass("unvisible");
             $("header").hide();
-        }, 1500);
+        }, 600);
         setTimeout(() => {
             $("header").fadeIn(800);
-        }, 1500);
+        }, 600);
 
         //var c = "hsla(" + Math.floor(Math.random() * 7) * 50 + ",56%,68%,1);
     });
