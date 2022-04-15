@@ -4,6 +4,7 @@ import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
+import * as login from 'src/app/classes/fetchers/login/content'
 
 @Injectable()
 export class ApiService {
@@ -27,7 +28,7 @@ export class ApiService {
     }
     getLogin(): Observable<any> {
         return this.http
-            .get<content>(this.Url + '/login')
+            .get<login.content>(this.Url + '/login')
             .pipe(catchError(this.handleError));
     }
 }

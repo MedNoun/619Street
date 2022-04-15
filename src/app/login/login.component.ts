@@ -10,7 +10,7 @@ import { ApiService } from '../datafetcher/service/api.service';
 export class LoginComponent implements OnInit {
   public content: content;
     constructor(private api: ApiService) {
-        api.getHomepage().subscribe((value) => {
+        api.getLogin().subscribe((value) => {
             this.content = value;
         });
     }
