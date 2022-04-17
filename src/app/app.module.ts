@@ -4,10 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomepageModule } from './homepage/homepage.module';
-import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
-    declarations: [AppComponent, RegistrationComponent],
+    declarations: [AppComponent],
     imports: [BrowserModule, AppRoutingModule, CoreModule],
     providers: [],
     bootstrap: [AppComponent]

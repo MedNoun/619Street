@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "../../../styles.scss";
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+.container{
+  max-width: 50%;
+  width: 90%;
+  background:none;
+  padding: 10% 2%;
+  border-radius: 5px;
+}
+.container .title{
+  font-size: $fs_medium;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+.container .subtitle{
+    font-size: $fs_small;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+  }
+  .fa{
+      width: 1px;
+  }
+  .icon {
+    background: $col-black;
+    color: white;
+    width: 30%;
+    text-align: center;
+    height: 45px;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  color: white;
+
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+  color: #fff;
+  display: flex;
+
+}
+form .input-box span.details{
+  display: block;
+  margin-bottom: 5px;
+  font-size: $fs_small;
+  color: white;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: $fs_small;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  background-color: rgb(212, 207, 207);
+  color:white;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #010014;
+}
+ 
+
+
+ form .button{
+   height: 60px;
+   margin: 5% 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   color: $col-white;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: $col_black;
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: $col_white;
+  color: $col-black;
+  border-color: $col-black;
+  }
+
+
+
+  form .login-button{
+    height: 60px;
+    margin: 5% 0
+  }
+  form .login-button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: $col_black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $col_white;
+    border-color: $col_black;
+  }
+  form .login-button input:hover{
+   /* transform: scale(0.99); */
+   background: $col_black;
+   color: $col_white;
+   }
+
+
+
+
+
+
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
