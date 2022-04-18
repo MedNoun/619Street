@@ -5,11 +5,10 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 }
 body{
-  height: 70vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,21 +33,9 @@ body{
     position: relative;
     text-align: center;
   }
-  .fa{
-      width: 1px;
-  }
-  .icon {
-    background: $col-black;
-    color: white;
-    width: 30%;
-    text-align: center;
-    height: 45px;
-  }
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-  }
+  
+
+ 
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
@@ -58,12 +45,27 @@ body{
 
 }
 form .user-details .input-box{
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: calc(100% / 2 - 20px);
-  color: #fff;
   display: flex;
 
 }
+
+.span{
+  margin-top: 2px;
+  background: $col-black;
+  color: white;
+  width: 30%;
+  text-align:center;
+  height: 66px;
+  border-radius: 5px;
+}
+.input-field {
+  width: 200%;
+  padding: 10px;
+  outline: none;
+}
+
 form .input-box span.details{
   display: block;
   margin-bottom: 5px;
@@ -149,27 +151,7 @@ form .input-box span.details{
     opacity: 1; /* Firefox */
   }
   
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-}
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
-}
+ 
+  
+ 
+
