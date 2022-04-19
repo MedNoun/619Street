@@ -1,33 +1,28 @@
-<div class="container flex column">
-  <div class="container flex column center">
+
     <div class="title">{{ form.title }}</div>
       <div class="subtitle">{{ form.subtitle }}</div>
-  </div>
-  <div class="container1">
-    <div class="screen">
-      <div class="screen__content">
-        <form class="login">
-          <div class="login__field">
-            <i class="login__icon fas fa-user"></i>
-            <input type="text" class="login__input" placeholder="Username / Email">
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="span"> <i class="fa-solid fa-user fa-xs icon"></i></span>
+             
+              <input  class="input-field"  type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+              <span class="span"><i class="fa fa-key fa-xs icon"></i></span>
+              
+  
+              <input  class="input-field"  type="password" placeholder="Password" required>
+            </div>
+          
           </div>
-          <div class="login__field">
-            <i class="login__icon fas fa-lock"></i>
-            <input type="password" class="login__input" placeholder="Password">
+          <div class="button">
+            <input type="submit" value="Register">
           </div>
-          <button class="button login__submit">
-            <span class="button__text">Log In</span>
-            <i class="button__icon fas fa-chevron-right"></i>
-          </button>				
-        </form>
+          <div class="login-button">
+              <input type="submit" value="Login">
+            </div>
         
-      </div>
-      <div class="screen__background">
-        <span class="screen__background__shape screen__background__shape4"></span>
-        <span class="screen__background__shape screen__background__shape3"></span>		
-        <span class="screen__background__shape screen__background__shape2"></span>
-        <span class="screen__background__shape screen__background__shape1"></span>
-      </div>		
-    </div>
-  </div>
+  
   
