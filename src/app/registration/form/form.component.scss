@@ -8,7 +8,7 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  height: 40vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,20 +138,61 @@ form .input-box span.details{
    /* transform: scale(0.99); */
    background: $col_black;
    color: $col_white;
-   }
-
-
-
-
-
-
-
+  }
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
   }
-  
- 
-  
- 
 
+
+  @media screen and (max-width: 700px) {
+   
+    body{
+      height: 55vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+    }
+    .container{
+      max-width: 100%;
+      background:none;
+      padding: 10% 2%;
+      border-radius: 5px;
+    }
+
+  }
+  @media screen and (min-width : 710px) and (max-width: 990px){
+    body{
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+    }
+    .container{
+      max-width: 100%;
+      background:none;
+      padding: 10% 2%;
+      border-radius: 5px;
+    }
+
+  }
+@media screen and (min-width : 1000px) and (max-width: 1400px){
+           
+      body{
+              height: 50vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10%;
+            }
+     .container{
+              max-width: 100%;
+              background:none;
+              padding: 10% 2%;
+              border-radius: 5px;
+            }
+          
+          }
+         

@@ -1,13 +1,58 @@
 @import "../../styles.scss";
+
 #visual01{
-    margin-top: -60%;
+    margin-top: -15%;
     margin-left:85%;
+    width: 25%;
 
 }
 
 #visual02{
-    margin-top:-30%;
+    margin-bottom:0%;
     margin-left:0%;
-    width: 50vh;
+    width: 80vh;
 }
+
+@media screen and (max-width: 700px) {
+   .section{
+height:100vh;   }
+ #visual01{
+    margin-top: -20%;
+    margin-left:70%;
+    width: 39%;
+
+}
+
+  }
+
+  @media screen and (min-width : 710px) and (max-width: 990px){
+           
+    .section{
+        height:100vh;   }
+
+         #visual01{
+            margin-top: -20%;
+            margin-left:79%;
+            width:40%;
+        
+        }
+  
+  }
+ 
+
+
+  @media screen and (min-width : 1000px) and (max-width: 1400px){
+    .section{
+        height:100vh;   }
+
+         #visual01{
+            margin-top: -17%;
+            margin-left:85%;
+            width: 35%;
+        
+        }        
+  
+  
+  }
+ 
 
