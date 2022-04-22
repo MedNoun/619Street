@@ -4,7 +4,11 @@ import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
+<<<<<<< HEAD
 import *  as registration from 'src/app/classes/fetchers/registration/content';
+=======
+import * as login from 'src/app/classes/fetchers/login/content'
+>>>>>>> feature/login
 
 @Injectable()
 export class ApiService {
@@ -26,11 +30,19 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
+<<<<<<< HEAD
     getRegistration(): Observable<any> {
         return this.http
             .get<registration.content>(this.Url + '/registration')
             .pipe(catchError(this.handleError));
     }
 
+=======
+    getLogin(): Observable<any> {
+        return this.http
+            .get<login.content>(this.Url + '/login')
+            .pipe(catchError(this.handleError));
+    }
+>>>>>>> feature/login
 }
 
