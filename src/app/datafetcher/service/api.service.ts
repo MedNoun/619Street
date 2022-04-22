@@ -4,6 +4,7 @@ import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
+import *  as registration from 'src/app/classes/fetchers/registration/content';
 
 @Injectable()
 export class ApiService {
@@ -25,4 +26,11 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
+    getRegistration(): Observable<any> {
+        return this.http
+            .get<registration.content>(this.Url + '/registration')
+            .pipe(catchError(this.handleError));
+    }
+
 }
+
