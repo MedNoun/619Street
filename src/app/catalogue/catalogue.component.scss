@@ -1,0 +1,42 @@
+@import "../../styles.scss";
+.text {
+    font-size: $fs-large;
+}
+.filters {
+    flex-basis: 500px;
+
+    font-size: $fs-medium;
+    margin: 30px 50px 0 0;
+}
+.articles {
+    flex-basis: content;
+    margin: 30px 0 0 0;
+}
+.divider {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    span {
+        display: inline-block;
+        padding: 0 10px; // Change to have padding betweeen the lines
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            border-top: solid 1px $col-black;
+            height: 1px;
+            position: absolute;
+            background: #ddd;
+            top: 50%;
+            width: 90vh; // Change width of both lines. It could be a persentage as well
+        }
+    }
+
+    span::before {
+        right: 100%;
+    }
+    span::after {
+        left: 100%;
+    }
+}

@@ -3,21 +3,9 @@ import { LoginComponent } from './login.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormComponent } from './form/form.component';
 
-
-
 @NgModule({
-  declarations: [
-    LoginComponent,
-    FormComponent
-  ],
-  imports: [
-    SharedModule  ],
-  exports: [LoginComponent]
+    declarations: [LoginComponent, FormComponent],
+    imports: [SharedModule],
+    exports: [LoginComponent]
 })
-export class LoginModule { }
-
-
-
-
-
-
+export class LoginModule {}

@@ -1,0 +1,22 @@
+<app-navbar class="container" [navbar]="content.navbar"></app-navbar>
+<div class="container">
+    <app-style01
+        class="text"
+        [ngStyle]="textStyle"
+        text="Catalogue"
+        [line]="false"
+    ></app-style01>
+</div>
+<div class="container flex">
+    <div class="filters flex column">
+        <div class="divider">
+            <span>Order By</span>
+        </div>
+        <div *ngFor="let item of filters.orderBy">{{ item }}</div>
+    </div>
+    <div class="articles flex wrap">
+        <ng-container *ngFor="let card of content.cards">
+            <app-card [card]="card"></app-card>
+        </ng-container>
+    </div>
+</div>
