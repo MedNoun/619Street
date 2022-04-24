@@ -6,12 +6,7 @@ import { LoginModule } from '../login/login.module';
 
 @NgModule({
     declarations: [],
-<<<<<<< HEAD
-    imports: [SharedModule, HomepageModule,RegistrationModule],
-    exports: [HomepageModule,RegistrationModule]
-=======
-    imports: [SharedModule, HomepageModule,LoginModule],
-    exports: [HomepageModule,LoginModule]
->>>>>>> feature/login
+    imports: [SharedModule, HomepageModule,LoginModule,RegistrationModule],
+    exports: [HomepageModule,LoginModule,RegistrationModule]
 })
 export class CoreModule {}

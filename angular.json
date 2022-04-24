@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "cli": {
       "analytics": "41b36c5f-5421-4ad5-a150-935948a5c423"
@@ -12,53 +11,6 @@
             "schematics": {
                 "@schematics/angular:component": {
                     "style": "scss"
-=======
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "e3f5e4dc-10ea-4508-8da2-f42fc1dd0f60"
-  },
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "Tunisien-Street": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/Tunisien-Street",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/nav-animations/perlin.js",
-              "src/assets/nav-animations/script.js"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
->>>>>>> feature/login
                 },
                 "@schematics/angular:application": {
                     "strict": true
