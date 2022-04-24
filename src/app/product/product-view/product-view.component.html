@@ -1,0 +1,30 @@
+<app-navbar [navbar]="content.navbar"></app-navbar>
+<div class="product-container flex section">
+    <div class="carousel-container">
+        <app-carousel
+            [ngStyle]="ngStyle"
+            class="carousel"
+            [carousel]="content.carousel"
+            [auto]="true"
+            [interval]="5000"
+        ></app-carousel>
+    </div>
+
+    <div class="details-container container">
+        <div>
+            <div class="">LOREM IPSUM</div>
+            <div class="">Ref: 120129100</div>
+            <div class="">99 TND</div>
+            <div class="">Choose a size</div>
+            <div class="flex space-evenly">
+                <div>23</div>
+                <div>34</div>
+                <div>36</div>
+                <div>38</div>
+            </div>
+            <div class="button">
+                <input type="submit" value="ADD TO CART" />
+            </div>
+        </div>
+    </div>
+</div>

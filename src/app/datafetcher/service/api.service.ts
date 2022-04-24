@@ -36,5 +36,6 @@ export class ApiService {
             .get<registration.content>(this.Url + '/registration')
             .pipe(catchError(this.handleError));
     }
+   
 }
 
