@@ -1,5 +1,5 @@
 <app-navbar class="container" [navbar]="content.navbar"></app-navbar>
-<div class="container">
+<div class="container titre">
     <app-style01
         class="text"
         [ngStyle]="textStyle"
@@ -12,9 +12,61 @@
         <div class="divider">
             <span>Order By</span>
         </div>
-        <div *ngFor="let item of filters.orderBy">{{ item }}</div>
+        <div class="filter flex" *ngFor="let item of filters.orderBy">
+            <app-checkbox
+                class="cont checkbox"
+                [id]="item"
+                (check)="filter($event)"
+                color="black"
+            ></app-checkbox>
+            <div class="name">
+                {{ item }}
+            </div>
+        </div>
+        <div class="divider">
+            <span>Order By</span>
+        </div>
+        <div class="filter flex" *ngFor="let item of filters.orderBy">
+            <app-checkbox
+                class="cont checkbox"
+                [id]="item"
+                (check)="filter($event)"
+                color="black"
+            ></app-checkbox>
+            <div class="name">
+                {{ item }}
+            </div>
+        </div>
+        <div class="divider">
+            <span>Order By</span>
+        </div>
+        <div class="filter flex" *ngFor="let item of filters.orderBy">
+            <app-checkbox
+                class="cont checkbox"
+                [id]="item"
+                (check)="filter($event)"
+                color="black"
+            ></app-checkbox>
+            <div class="name">
+                {{ item }}
+            </div>
+        </div>
+        <div class="divider">
+            <span>Order By</span>
+        </div>
+        <div class="filter flex" *ngFor="let item of filters.orderBy">
+            <app-checkbox
+                class="cont checkbox"
+                [id]="item"
+                (check)="filter($event)"
+                color="black"
+            ></app-checkbox>
+            <div class="name">
+                {{ item }}
+            </div>
+        </div>
     </div>
-    <div class="articles flex wrap">
+    <div class="articles flex center wrap">
         <ng-container *ngFor="let card of content.cards">
             <app-card [card]="card"></app-card>
         </ng-container>

@@ -19,6 +19,9 @@ export class CatalogueComponent implements OnInit {
             this.content = value;
         });
     }
+    filter(e) {
+        console.log('I am in filter', e);
+    }
 
     ngOnInit(): void {}
 }

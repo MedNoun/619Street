@@ -11,9 +11,10 @@
     font-family: "36days";
     src: url("assets/fonts/36Days-Regular.ttf");
 }
-$fs_small: clamp(0.8rem, calc(1.5vw + 1rem), 1rem);
+$fs_small: clamp(1.2rem, calc(1.5vw + 1rem), 2rem);
 $fs_medium: clamp(2rem, calc(1.5vw + 1rem), 3.5rem);
-$fs_large: clamp(3.5rem, calc(1.5vw + 1rem), 4rem);
+$fs_large: clamp(3rem, calc(1.5vw + 3rem), 4rem);
+$fs_xlarge: clamp(4rem, calc(9vw + 1rem), 10rem);
 $col_black: #222831;
 $col_grey: #393e46;
 $col_blue: #00adb5;
@@ -25,6 +26,10 @@ $marg_site: min(8vw, 150px);
     text-decoration: none;
     list-style-type: none;
     position: relative;
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 body {
     color: $col_black;
