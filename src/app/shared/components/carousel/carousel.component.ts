@@ -17,6 +17,7 @@ export class CarouselComponent implements OnInit {
     @Input('interval') slideInterval: number = 3000;
     @Input('ngStyle')
     set ngStyle(value: { [klass: string]: any } | null) {}
+    @Input("maxHeight") maxHeight : string =  '100%'
     images: carouselImage[];
     selectedIndex: number;
     brand: string;
