@@ -2,8 +2,12 @@
 .text {
     font-size: $fs-large;
 }
+.father {
+    margin-bottom: 50px;
+}
 .titre {
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .checkbox {
     align-self: center;
@@ -13,7 +17,7 @@
 .filters {
     min-width: min(400px, 35vw);
     font-size: $fs-small;
-    margin: 30px 50px 0 0;
+    margin: 10px 50px 0 0;
 }
 .articles {
     flex-basis: content;
@@ -48,4 +52,20 @@
     span::after {
         left: 100%;
     }
+}
+
+@media (max-width: 1363px) {
+    .father {
+        flex-direction: column;
+    }
+    .filter-container {
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+        row-gap: 13px;
+    }
+}
+@media (max-width: 578px) {
+}
+@media (max-width: 500px) {
 }

@@ -7,62 +7,70 @@
         [line]="false"
     ></app-style01>
 </div>
-<div class="container flex">
+<div class="container flex father">
     <div class="filters flex column">
         <div class="divider">
             <span>Order By</span>
         </div>
-        <div class="filter flex" *ngFor="let item of filters.orderBy">
-            <app-checkbox
-                class="cont checkbox"
-                [id]="item"
-                (check)="filter($event)"
-                color="black"
-            ></app-checkbox>
-            <div class="name">
-                {{ item }}
+        <div class="flex column filter-container">
+            <div class="filter flex" *ngFor="let item of filters.orderBy">
+                <app-checkbox
+                    class="cont checkbox"
+                    [id]="item"
+                    (check)="filter($event)"
+                    color="black"
+                ></app-checkbox>
+                <div class="name">
+                    {{ item }}
+                </div>
             </div>
         </div>
         <div class="divider">
             <span>Order By</span>
         </div>
-        <div class="filter flex" *ngFor="let item of filters.orderBy">
-            <app-checkbox
-                class="cont checkbox"
-                [id]="item"
-                (check)="filter($event)"
-                color="black"
-            ></app-checkbox>
-            <div class="name">
-                {{ item }}
+        <div class="flex column filter-container">
+            <div class="filter flex" *ngFor="let item of filters.orderBy">
+                <app-checkbox
+                    class="cont checkbox"
+                    [id]="item"
+                    (check)="filter($event)"
+                    color="black"
+                ></app-checkbox>
+                <div class="name">
+                    {{ item }}
+                </div>
             </div>
         </div>
         <div class="divider">
             <span>Order By</span>
         </div>
-        <div class="filter flex" *ngFor="let item of filters.orderBy">
-            <app-checkbox
-                class="cont checkbox"
-                [id]="item"
-                (check)="filter($event)"
-                color="black"
-            ></app-checkbox>
-            <div class="name">
-                {{ item }}
+        <div class="flex column filter-container">
+            <div class="filter flex" *ngFor="let item of filters.orderBy">
+                <app-checkbox
+                    class="cont checkbox"
+                    [id]="item"
+                    (check)="filter($event)"
+                    color="black"
+                ></app-checkbox>
+                <div class="name">
+                    {{ item }}
+                </div>
             </div>
         </div>
         <div class="divider">
             <span>Order By</span>
         </div>
-        <div class="filter flex" *ngFor="let item of filters.orderBy">
-            <app-checkbox
-                class="cont checkbox"
-                [id]="item"
-                (check)="filter($event)"
-                color="black"
-            ></app-checkbox>
-            <div class="name">
-                {{ item }}
+        <div class="flex column filter-container">
+            <div class="filter flex" *ngFor="let item of filters.orderBy">
+                <app-checkbox
+                    class="cont checkbox"
+                    [id]="item"
+                    (check)="filter($event)"
+                    color="black"
+                ></app-checkbox>
+                <div class="name">
+                    {{ item }}
+                </div>
             </div>
         </div>
     </div>
@@ -72,3 +80,4 @@
         </ng-container>
     </div>
 </div>
+<app-footer [footer]="content.footer"></app-footer>

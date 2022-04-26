@@ -13,6 +13,7 @@ export class CarouselComponent implements OnInit {
     @Input('carousel') carousel: carousel;
     @Input('indicators') indicators: boolean = true;
     @Input('controls') controls: boolean = true;
+    @Input('text') text: boolean = true;
     @Input('auto') autoSlide: boolean = false;
     @Input('interval') slideInterval: number = 3000;
     images: carouselImage[];
