@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "brand": "619Street",
+    "items": ["Home", "Login", "New Collection"]
+  },
+  "form": {
+    "title": "Join Us",
+    "subtitle": "Create your account"
+  }
+}
