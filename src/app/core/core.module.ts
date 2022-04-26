@@ -4,6 +4,7 @@ import { RegistrationModule } from '../registration/registration.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginModule } from '../login/login.module';
 import { CatalogueModule } from '../catalogue/catalogue.module';
+import { ProductModule } from '../product/product.module';
 
 @NgModule({
     declarations: [],
@@ -12,8 +13,15 @@ import { CatalogueModule } from '../catalogue/catalogue.module';
         HomepageModule,
         LoginModule,
         RegistrationModule,
-        CatalogueModule
+        CatalogueModule,
+        ProductModule
     ],
-    exports: [HomepageModule, LoginModule, RegistrationModule, CatalogueModule]
+    exports: [
+        HomepageModule,
+        LoginModule,
+        RegistrationModule,
+        CatalogueModule,
+        ProductModule
+    ]
 })
 export class CoreModule {}

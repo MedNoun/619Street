@@ -6,6 +6,8 @@ import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
 import * as login from 'src/app/classes/fetchers/login/content';
 import * as registration from 'src/app/classes/fetchers/registration/content';
+import * as productView from 'src/app/classes/fetchers/productView/content';
+import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
 @Injectable()
 export class ApiService {
     private Url = 'http://localhost:3000/populator';
@@ -26,19 +28,26 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
+
     getLogin(): Observable<any> {
         return this.http
             .get<login.content>(this.Url + '/login')
             .pipe(catchError(this.handleError));
     }
+
     getRegistration(): Observable<any> {
         return this.http
             .get<registration.content>(this.Url + '/registration')
             .pipe(catchError(this.handleError));
     }
+
     getCatalogue(): Observable<any> {
+        return this.http.get<catalogue>(this.Url + '/catalogue');
+    }
+
+    getProductVew(): Observable<any> {
         return this.http
-            .get<registration.content>(this.Url + '/catalogue')
+            .get<productView.content>(this.Url + '/productView')
             .pipe(catchError(this.handleError));
     }
 }
