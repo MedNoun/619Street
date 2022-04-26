@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filters } from '../classes/fetchers/catalogue/filters';
+import { catalogue } from '../classes/fetchers/catalogue/catalogue';
 import { content } from '../classes/fetchers/homepage/content';
 import { ApiService } from '../datafetcher/service/api.service';
 
@@ -9,12 +9,12 @@ import { ApiService } from '../datafetcher/service/api.service';
     styleUrls: ['./catalogue.component.scss']
 })
 export class CatalogueComponent implements OnInit {
+    public filters: catalogue = new catalogue();
     public content: content;
-    public filters: filters = new filters();
-
     constructor(private api: ApiService) {
-        api.getHomepage().subscribe((value) => {
-            this.content = value;
+        api.getCatalogue().subscribe((value) => {
+            this.filters = value;
+            console.log(value);
         });
     }
     filter(e) {
