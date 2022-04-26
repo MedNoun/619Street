@@ -6,7 +6,7 @@
     border-radius: 15px;
     box-shadow: 0 8px 16px #dce1e1;
     height: 100%;
-     img {
+    img {
         display: none;
         object-fit: cover;
         &.image-active {
@@ -112,8 +112,6 @@
     left: 10em;
     bottom: 3em;
     text-align: start;
-    .text-2 {
-    }
 }
 
 @media (max-width: 900px) {

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
-import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
 import * as login from 'src/app/classes/fetchers/login/content';
 import * as registration from 'src/app/classes/fetchers/registration/content';
