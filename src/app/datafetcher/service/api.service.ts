@@ -4,8 +4,9 @@ import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { slogan } from 'src/app/classes/fetchers/homepage/slogan';
 import { Observable, throwError } from 'rxjs';
-import * as login from 'src/app/classes/fetchers/login/content'
-import *  as registration from 'src/app/classes/fetchers/registration/content';
+import * as login from 'src/app/classes/fetchers/login/content';
+import * as registration from 'src/app/classes/fetchers/registration/content';
+import * as productView from 'src/app/classes/fetchers/productView/content';
 @Injectable()
 export class ApiService {
     private Url = 'http://localhost:3000/populator';
@@ -36,6 +37,9 @@ export class ApiService {
             .get<registration.content>(this.Url + '/registration')
             .pipe(catchError(this.handleError));
     }
-   
+    getProductVew(): Observable<any> {
+        return this.http
+            .get<productView.content>(this.Url + '/productView')
+            .pipe(catchError(this.handleError));
+    }
 }
-

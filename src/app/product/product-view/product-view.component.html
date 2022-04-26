@@ -2,9 +2,10 @@
     <div class="navbar-container">
         <app-navbar class="navbar" [navbar]="content.navbar"></app-navbar>
     </div>
-   
+
     <div class="carousel-container">
         <app-carousel
+            [indicators]="false"
             [ngStyle]="ngStyle"
             class="carousel"
             [carousel]="content.carousel"
@@ -16,22 +17,20 @@
     <div class="details-container container">
         <div>
             <div class="flex space-between title-container">
-                <div class="title">LOREM IPSUM</div>
+                <div class="title">{{ content.productView.productName }}</div>
                 <div class="like">
-                    <img
-                        src="../../../assets/productViewImages/heart-svgrepo-com.svg"
-                        alt=""
-                    />
+                    <img [src]="content.productView.likeLogo" alt="" />
                 </div>
             </div>
-            <div class="referance">Ref: 120129100</div>
-            <div class="price">99 TND</div>
+            <div class="referance">
+                Ref: {{ content.productView.referance }}
+            </div>
+            <div class="price">{{ content.productView.price }} TND</div>
             <div class="size-selection">Choose a size</div>
             <div class="flex space-between sizes">
-                <div>23</div>
-                <div>34</div>
-                <div>36</div>
-                <div>38</div>
+                <div *ngFor="let size of content.productView.sizes">
+                    {{ size }}
+                </div>
             </div>
             <div class="button">
                 <input type="submit" value="ADD TO CART" />
