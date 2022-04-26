@@ -23,7 +23,7 @@
     border-color: $col-black;
 }
 .details-container {
-    margin-top: 20vh ;
+    margin-top: 20vh;
     margin-left: 70px;
     margin-right: 0px;
     width: 50%;
@@ -31,11 +31,11 @@
 .carousel-container {
     width: 50%;
 }
-.sizes{
-    width: 60%;
+.sizes {
+    width: 30%;
     font-size: 30px;
-
-    div{
+    margin-top:20px;
+    div {
         border-style: solid;
         border-width: 1px;
         padding-top: 0px;
@@ -43,4 +43,37 @@
         padding-left: 3px;
         padding-right: 3px;
     }
+}
+.title {
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.like {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+.title-container {
+    width: 60%;
+}
+.referance {
+    font-weight: 100;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+.price {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 35px;
+}
+.size-selection{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-top: 2%;
+}
+.navbar-container{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
