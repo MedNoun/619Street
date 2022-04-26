@@ -1,12 +1,14 @@
-.three h1 {
-    font-size: 1em;
+@import "../../../../styles.scss";
+
+.text {
+    font-size: $fs-large;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.5em;
     padding-bottom: 15px;
     position: relative;
 }
-.three h1:before {
+.three .text:before {
     content: "";
     position: absolute;
     left: 0;
@@ -15,7 +17,7 @@
     width: 55px;
     background-color: #111;
 }
-.three h1:after {
+.three .text:after {
     content: "";
     position: absolute;
     left: 0;

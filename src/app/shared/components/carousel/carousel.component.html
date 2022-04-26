@@ -6,12 +6,14 @@
         class="fade"
         [ngClass]="{ 'image-active': selectedIndex === i }"
     />
-    <div class="text">
-        <div class="title">{{ brand }}</div>
-        <div class="description">{{ description }}</div>
-    </div>
-    <div class="more">
-        <div class="text-2">See more !</div>
+    <div *ngIf="text">
+        <div class="text">
+            <div class="title">{{ brand }}</div>
+            <div class="description">{{ description }}</div>
+        </div>
+        <div class="more">
+            <div class="text-2">See more !</div>
+        </div>
     </div>
     <div *ngIf="indicators" class="carousel-dot-container">
         <span
@@ -19,7 +21,6 @@
             [ngClass]="{ active: selectedIndex === i }"
             (click)="selectImage(i)"
             *ngFor="let item of images; let i = index"
-            class="dot"
         >
         </span>
     </div>
