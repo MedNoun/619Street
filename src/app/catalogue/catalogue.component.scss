@@ -2,6 +2,10 @@
 .text {
     font-size: $fs-large;
 }
+.filter-name {
+    font-size: $fs-medium;
+    margin-bottom: 20px;
+}
 .father {
     margin-bottom: 50px;
 }
@@ -29,6 +33,21 @@
     overflow: hidden;
     text-align: center;
     font-size: $fs-medium;
+    .line {
+        display: inline-block;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            border-top: solid 1px $col-black;
+            height: 1px;
+            position: absolute;
+            background: #ddd;
+            top: 50%;
+            width: 90vh; // Change width of both lines. It could be a persentage as well
+        }
+    }
     span {
         display: inline-block;
         padding: 0 10px; // Change to have padding betweeen the lines
@@ -46,10 +65,12 @@
         }
     }
 
-    span::before {
+    span::before,
+    .line::before {
         right: 100%;
     }
-    span::after {
+    span::after,
+    .line::after {
         left: 100%;
     }
 }

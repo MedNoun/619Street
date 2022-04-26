@@ -1,17 +1,10 @@
 <app-navbar class="container" [navbar]="content.navbar"></app-navbar>
 <div class="container titre">
-    <app-style01
-        class="text"
-        [ngStyle]="textStyle"
-        text="Catalogue"
-        [line]="false"
-    ></app-style01>
+    <app-style01 class="text" text="Catalogue" [line]="false"></app-style01>
 </div>
 <div class="container flex father">
     <div class="filters flex column">
-        <div class="divider">
-            <span>Order By</span>
-        </div>
+        <div class="filter-name">Order By</div>
         <div class="flex column filter-container">
             <div class="filter flex" *ngFor="let item of filters.orderBy">
                 <app-checkbox
@@ -26,8 +19,9 @@
             </div>
         </div>
         <div class="divider">
-            <span>Order By</span>
+            <div class="line"></div>
         </div>
+        <div class="filter-name">Order By</div>
         <div class="flex column filter-container">
             <div class="filter flex" *ngFor="let item of filters.orderBy">
                 <app-checkbox
@@ -42,8 +36,9 @@
             </div>
         </div>
         <div class="divider">
-            <span>Order By</span>
+            <div class="line"></div>
         </div>
+        <div class="filter-name">Order By</div>
         <div class="flex column filter-container">
             <div class="filter flex" *ngFor="let item of filters.orderBy">
                 <app-checkbox
@@ -58,20 +53,7 @@
             </div>
         </div>
         <div class="divider">
-            <span>Order By</span>
-        </div>
-        <div class="flex column filter-container">
-            <div class="filter flex" *ngFor="let item of filters.orderBy">
-                <app-checkbox
-                    class="cont checkbox"
-                    [id]="item"
-                    (check)="filter($event)"
-                    color="black"
-                ></app-checkbox>
-                <div class="name">
-                    {{ item }}
-                </div>
-            </div>
+            <div class="line"></div>
         </div>
     </div>
     <div class="articles flex center wrap">

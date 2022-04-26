@@ -11,9 +11,7 @@ import { ApiService } from '../datafetcher/service/api.service';
 export class CatalogueComponent implements OnInit {
     public content: content;
     public filters: filters = new filters();
-    public textStyle = {
-        lettreSpacing: '10px'
-    };
+
     constructor(private api: ApiService) {
         api.getHomepage().subscribe((value) => {
             this.content = value;
