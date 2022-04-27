@@ -16,20 +16,13 @@ export class CarouselComponent implements OnInit {
     @Input('text') text: boolean = true;
     @Input('auto') autoSlide: boolean = false;
     @Input('interval') slideInterval: number = 3000;
-    @Input('ngStyle')
-    set ngStyle(value: { [klass: string]: any } | null) {}
-    @Input("maxHeight") maxHeight : string =  '100%'
+    @Input('maxHeight') maxHeight: string = '100%';
     images: carouselImage[];
     selectedIndex: number;
     brand: string;
     description: string;
     constructor() {
         this.selectedIndex = 0;
-    }
-    imgStyle = {
-        display: "block",
-        width: "100%",
-        height: "85vh",
     }
     ngOnInit(): void {
         this.setBrand(this.selectedIndex);
