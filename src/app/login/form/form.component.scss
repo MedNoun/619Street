@@ -47,32 +47,35 @@ form .user-details .input-box {
 }
 
 .span {
-    margin-top: 2px;
     background: $col-black;
     color: white;
     width: 30%;
     text-align: center;
-    height: 66px;
+    height: 68px;
     border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 .input-field {
     width: 200%;
     padding: 10px;
-    outline: none;
 }
 
 form .input-box span.details {
     display: block;
     margin-bottom: 5px;
-    font-size: $fs_small;
+    font-size: $fs_xsmall;
     color: white;
 }
 .user-details .input-box input {
     height: 45px;
     width: 100%;
-    outline: none;
-    font-size: $fs_small;
+    font-size: $fs_xsmall;
     border-radius: 5px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     padding-left: 15px;
     border: 1px solid #ccc;
     border-bottom-width: 2px;

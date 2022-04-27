@@ -11,6 +11,7 @@
     font-family: "36days";
     src: url("assets/fonts/36Days-Regular.ttf");
 }
+$fs_xsmall: clamp(0.5rem, calc(1.5vw + 0.5rem), 1rem);
 $fs_small: clamp(1.2rem, calc(1.5vw + 1rem), 2rem);
 $fs_medium: clamp(2rem, calc(1.5vw + 1rem), 3.5rem);
 $fs_large: clamp(3rem, calc(1.5vw + 3rem), 4rem);
