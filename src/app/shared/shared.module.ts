@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BlobComponent } from './components/blob/blob.component';
 import { CirclesComponent } from './components/circles/circles.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { CirclesComponent } from './components/circles/circles.component';
         BlobComponent,
         CirclesComponent,
         
+        CheckboxComponent
     ],
     imports: [CommonModule, DatafetcherModule],
     providers: [],
@@ -31,7 +33,7 @@ import { CirclesComponent } from './components/circles/circles.component';
         CarouselComponent,
         Style01Component,
         CirclesComponent,
-
+        CheckboxComponent
     ]
 })
 export class SharedModule {}

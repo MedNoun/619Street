@@ -13,8 +13,10 @@ export class CarouselComponent implements OnInit {
     @Input('carousel') carousel: carousel;
     @Input('indicators') indicators: boolean = true;
     @Input('controls') controls: boolean = true;
+    @Input('text') text: boolean = true;
     @Input('auto') autoSlide: boolean = false;
     @Input('interval') slideInterval: number = 3000;
+    @Input('maxHeight') maxHeight: string = '100%';
     images: carouselImage[];
     selectedIndex: number;
     brand: string;
@@ -22,7 +24,6 @@ export class CarouselComponent implements OnInit {
     constructor() {
         this.selectedIndex = 0;
     }
-
     ngOnInit(): void {
         this.setBrand(this.selectedIndex);
         this.images = this.carousel.images;

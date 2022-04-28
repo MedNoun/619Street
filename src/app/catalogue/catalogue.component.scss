@@ -1,0 +1,93 @@
+@import "../../styles.scss";
+.text {
+    font-size: $fs-large;
+}
+.filter-name {
+    font-size: $fs-medium;
+    margin-bottom: 20px;
+}
+.father {
+    margin-bottom: 50px;
+}
+.titre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox {
+    align-self: center;
+    margin-right: min(20px, 3vw);
+}
+
+.filters {
+    min-width: min(400px, 35vw);
+    font-size: $fs-small;
+    margin: 10px 50px 0 0;
+}
+.articles {
+    flex-basis: content;
+    margin: 30px 0 0 0;
+}
+.divider {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-size: $fs-medium;
+    .line {
+        display: inline-block;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            border-top: solid 1px $col-black;
+            height: 1px;
+            position: absolute;
+            background: #ddd;
+            top: 50%;
+            width: 90vh; // Change width of both lines. It could be a persentage as well
+        }
+    }
+    span {
+        display: inline-block;
+        padding: 0 10px; // Change to have padding betweeen the lines
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            border-top: solid 1px $col-black;
+            height: 1px;
+            position: absolute;
+            background: #ddd;
+            top: 50%;
+            width: 90vh; // Change width of both lines. It could be a persentage as well
+        }
+    }
+
+    span::before,
+    .line::before {
+        right: 100%;
+    }
+    span::after,
+    .line::after {
+        left: 100%;
+    }
+}
+
+@media (max-width: 1363px) {
+    .father {
+        flex-direction: column;
+    }
+    .filter-container {
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+        row-gap: 13px;
+        column-gap: 17px;
+    }
+}
+@media (max-width: 578px) {
+}
+@media (max-width: 500px) {
+}

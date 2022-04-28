@@ -1,0 +1,33 @@
+<app-navbar class="container" [navbar]="filters.navbar"></app-navbar>
+<div class="container titre">
+    <app-style01 class="text" text="Catalogue" [line]="false"></app-style01>
+</div>
+<div class="container flex father">
+    <div class="filters flex column">
+        <div *ngFor="let filte of filters.filters">
+            <div class="filter-name">{{ filte.title }}</div>
+            <div class="flex column filter-container">
+                <div class="filter flex" *ngFor="let item of filte.items">
+                    <app-checkbox
+                        class="cont checkbox"
+                        [id]="item"
+                        (check)="filter($event)"
+                        color="black"
+                    ></app-checkbox>
+                    <div class="name">
+                        {{ item }}
+                    </div>
+                </div>
+            </div>
+            <div class="divider">
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="articles flex center wrap">
+        <ng-container *ngFor="let card of filters.cards">
+            <app-card [card]="card"></app-card>
+        </ng-container>
+    </div>
+</div>
+<app-footer [footer]="filters.footer"></app-footer>

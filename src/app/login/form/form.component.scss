@@ -1,127 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import "../../../styles.scss";
 
-
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
-body{
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10%;
+body {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
 }
-.container{
-  max-width: 50%;
-  width: 90%;
-  background:none;
-  padding: 10% 2%;
-  border-radius: 5px;
+.container {
+    max-width: 50%;
+    width: 90%;
+    background: none;
+    padding: 10% 2%;
+    border-radius: 5px;
 }
-.container .title{
-  font-size: $fs_medium;
-  font-weight: 500;
-  position: relative;
-  text-align: center;
+.container .title {
+    font-size: $fs_medium;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
 }
-.container .subtitle{
+.container .subtitle {
     font-size: $fs_small;
     font-weight: 500;
     position: relative;
     text-align: center;
-  }
-  
-
- 
-.content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-  color: white;
-
-}
-form .user-details .input-box{
-  margin-bottom: 20px;
-  width: calc(100% / 2 - 20px);
-  display: flex;
-
 }
 
-.span{
-  margin-top: 2px;
-  background: $col-black;
-  color: white;
-  width: 30%;
-  text-align:center;
-  height: 66px;
-  border-radius: 5px;
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    color: white;
 }
+form .user-details .input-box {
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 20px);
+    display: flex;
+}
+
+.span {
+    background: $col-black;
+    color: white;
+    width: 30%;
+    text-align: center;
+    height: 68px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .input-field {
-  width: 200%;
-  padding: 10px;
-  outline: none;
+    width: 200%;
+    padding: 10px;
 }
 
-form .input-box span.details{
-  display: block;
-  margin-bottom: 5px;
-  font-size: $fs_small;
-  color: white;
+form .input-box span.details {
+    display: block;
+    margin-bottom: 5px;
+    font-size: $fs_xsmall;
+    color: white;
 }
-.user-details .input-box input{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: $fs_small;
-  border-radius: 5px;
-  padding-left: 15px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
-  background-color: rgb(212, 207, 207);
-  color:white;
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    font-size: $fs_xsmall;
+    border-radius: 5px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background-color: rgb(212, 207, 207);
+    color: white;
 }
 .user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color: #010014;
+.user-details .input-box input:valid {
+    border-color: #010014;
 }
- 
 
-
- form .button{
-   height: 60px;
-   margin: 5% 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   color: $col-white;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: $col_black;
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background: $col_white;
-  color: $col-black;
-  border-color: $col-black;
-  }
-
-
-
-  form .login-button{
+form .button {
     height: 60px;
-    margin: 5% 0
-  }
-  form .login-button input{
+    margin: 5% 0;
+}
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: $col-white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $col_black;
+}
+form .button input:hover {
+    /* transform: scale(0.99); */
+    background: $col_white;
+    color: $col-black;
+    border-color: $col-black;
+}
+
+form .login-button {
+    height: 60px;
+    margin: 5% 0;
+}
+form .login-button input {
     height: 100%;
     width: 100%;
     border-radius: 5px;
@@ -133,66 +127,60 @@ form .input-box span.details{
     transition: all 0.3s ease;
     background: $col_white;
     border-color: $col_black;
-  }
-  form .login-button input:hover{
-   /* transform: scale(0.99); */
-   background: $col_black;
-   color: $col_white;
-  }
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+}
+form .login-button input:hover {
+    /* transform: scale(0.99); */
+    background: $col_black;
+    color: $col_white;
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
-  }
+}
 
-
-  @media screen and (max-width: 700px) {
-   
-    body{
-      height: 55vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10%;
+@media screen and (max-width: 700px) {
+    body {
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
     }
-    .container{
-      max-width: 100%;
-      background:none;
-      padding: 10% 2%;
-      border-radius: 5px;
+    .container {
+        max-width: 100%;
+        background: none;
+        padding: 10% 2%;
+        border-radius: 5px;
     }
-
-  }
-  @media screen and (min-width : 710px) and (max-width: 990px){
-    body{
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10%;
+}
+@media screen and (min-width: 710px) and (max-width: 990px) {
+    body {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
     }
-    .container{
-      max-width: 100%;
-      background:none;
-      padding: 10% 2%;
-      border-radius: 5px;
+    .container {
+        max-width: 100%;
+        background: none;
+        padding: 10% 2%;
+        border-radius: 5px;
     }
-
-  }
-@media screen and (min-width : 1000px) and (max-width: 1400px){
-           
-      body{
-              height: 50vh;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 10%;
-            }
-     .container{
-              max-width: 100%;
-              background:none;
-              padding: 10% 2%;
-              border-radius: 5px;
-            }
-          
-          }
-         
+}
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    body {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+    .container {
+        max-width: 100%;
+        background: none;
+        padding: 10% 2%;
+        border-radius: 5px;
+    }
+}

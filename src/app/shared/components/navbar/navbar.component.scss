@@ -4,9 +4,13 @@
     top: -350px;
     left: -250px;
 }
-
+header {
+    position: relative;
+    z-index: 2;
+}
 nav {
     font-size: $fs_medium;
+
     ul {
         display: flex;
         justify-content: space-between;
@@ -16,7 +20,7 @@ nav {
     .brand {
         font-family: "sprite";
         color: $col_white;
-        z-index: 1;
+        z-index: 2;
     }
 }
 .nav-items {
@@ -27,7 +31,7 @@ nav {
     flex-wrap: wrap;
     overflow: hidden;
     color: $col_white;
-    z-index: 2;
+    z-index: 3;
 }
 .nav-item {
     margin: 1.5rem auto 0rem 15vw;
@@ -42,13 +46,13 @@ i.nav-item {
 }
 .items {
     display: flex;
-    z-index: 1;
+    z-index: 2;
     width: 15vw;
     justify-content: space-between;
 }
 
 canvas {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 0px;
     left: 0px;

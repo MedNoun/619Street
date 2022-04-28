@@ -1,0 +1,14 @@
+import { card } from '../shared/card';
+import { footer } from '../shared/footer';
+import { navbar } from '../shared/navbar';
+
+export class catalogue {
+    navbar: navbar;
+    filters: filter[];
+    cards: card[];
+    footer: footer;
+}
+export class filter {
+    title: string;
+    items: string[];
+}

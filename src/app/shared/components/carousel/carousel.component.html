@@ -1,4 +1,8 @@
-<div *ngIf="images && images.length > 0" class="carousel-container">
+<div
+    *ngIf="images && images.length > 0"
+    [ngStyle]="{ height: maxHeight }"
+    class="carousel-container"
+>
     <img
         *ngFor="let img of images; let i = index"
         [src]="img.src"
@@ -6,11 +10,13 @@
         class="fade"
         [ngClass]="{ 'image-active': selectedIndex === i }"
     />
-    <div class="text">
-        <div class="title">{{ brand }}</div>
-        <div class="description">{{ description }}</div>
+    <div class="text" *ngIf="text">
+        <div>
+            <div class="title">{{ brand }}</div>
+            <div class="description">{{ description }}</div>
+        </div>
     </div>
-    <div class="more">
+    <div *ngIf="text" class="more">
         <div class="text-2">See more !</div>
     </div>
     <div *ngIf="indicators" class="carousel-dot-container">
@@ -19,7 +25,6 @@
             [ngClass]="{ active: selectedIndex === i }"
             (click)="selectImage(i)"
             *ngFor="let item of images; let i = index"
-            class="dot"
         >
         </span>
     </div>

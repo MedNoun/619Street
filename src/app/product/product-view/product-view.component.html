@@ -1,0 +1,40 @@
+<div class="navbar-container">
+    <app-navbar class="navbar" [navbar]="content.navbar"></app-navbar>
+</div>
+<div class="product-container flex section">
+    <div class="carousel-container">
+        <app-carousel
+            [indicators]="false"
+            [text]="false"
+            [ngStyle]="ngStyle"
+            class="carousel"
+            [carousel]="content.carousel"
+            [auto]="true"
+            [interval]="5000"
+        ></app-carousel>
+    </div>
+
+    <div class="details-container container">
+        <div>
+            <div class="flex space-between title-container">
+                <div class="title">{{ content.productView.productName }}</div>
+                <div class="like">
+                    <img [src]="content.productView.likeLogo" alt="" />
+                </div>
+            </div>
+            <div class="fix referance">
+                Ref: {{ content.productView.referance }}
+            </div>
+            <div class="fix price">{{ content.productView.price }} TND</div>
+            <div class="fix size-selection">Choose a size</div>
+            <div class="flex space-between sizes">
+                <div *ngFor="let size of content.productView.sizes">
+                    {{ size }}
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="ADD TO CART" />
+            </div>
+        </div>
+    </div>
+</div>
