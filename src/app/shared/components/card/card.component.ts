@@ -9,5 +9,8 @@ import { card } from 'src/app/classes/fetchers/shared/card';
 export class CardComponent implements OnInit {
     @Input('card') card: card;
     constructor() {}
+    log(e) {
+        console.log(e);
+    }
     ngOnInit(): void {}
 }
