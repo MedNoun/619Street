@@ -88,51 +88,7 @@ form .input-box span.details {
     border-color: #010014;
 }
 
-form .button {
-    height: 60px;
-    margin: 5% 0;
-}
-form .button input {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    color: $col-white;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: $col_black;
-}
-form .button input:hover {
-    /* transform: scale(0.99); */
-    background: $col_white;
-    color: $col-black;
-    border-color: $col-black;
-}
 
-form .login-button {
-    height: 60px;
-    margin: 5% 0;
-}
-form .login-button input {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    color: $col_black;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: $col_white;
-    border-color: $col_black;
-}
-form .login-button input:hover {
-    /* transform: scale(0.99); */
-    background: $col_black;
-    color: $col_white;
-}
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
