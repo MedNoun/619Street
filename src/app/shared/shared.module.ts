@@ -7,6 +7,7 @@ import { Style01Component } from './components/style01/style01.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BlobComponent } from './components/blob/blob.component';
+import { CirclesComponent } from './components/circles/circles.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
@@ -17,6 +18,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
         FooterComponent,
         CarouselComponent,
         BlobComponent,
+        CirclesComponent,
+        
         CheckboxComponent
     ],
     imports: [CommonModule, DatafetcherModule],
@@ -29,6 +32,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
         CardComponent,
         CarouselComponent,
         Style01Component,
+        CirclesComponent,
         CheckboxComponent
     ]
 })
