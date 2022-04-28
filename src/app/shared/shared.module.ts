@@ -7,6 +7,7 @@ import { Style01Component } from './components/style01/style01.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BlobComponent } from './components/blob/blob.component';
+import { CirclesComponent } from './components/circles/circles.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,9 @@ import { BlobComponent } from './components/blob/blob.component';
         Style01Component,
         FooterComponent,
         CarouselComponent,
-        BlobComponent
+        BlobComponent,
+        CirclesComponent,
+        
     ],
     imports: [CommonModule, DatafetcherModule],
     providers: [],
@@ -26,7 +29,9 @@ import { BlobComponent } from './components/blob/blob.component';
         DatafetcherModule,
         CardComponent,
         CarouselComponent,
-        Style01Component
+        Style01Component,
+        CirclesComponent,
+
     ]
 })
 export class SharedModule {}
