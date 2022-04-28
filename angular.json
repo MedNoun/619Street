@@ -6,7 +6,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "Tunisien-Street": {
+        "619_Street": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -23,7 +23,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/Tunisien-Street",
+                        "outputPath": "dist/619_Street",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "Tunisien-Street:build:production"
+                            "browserTarget": "619_Street:build:production"
                         },
                         "development": {
-                            "browserTarget": "Tunisien-Street:build:development"
+                            "browserTarget": "619_Street:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "Tunisien-Street:build"
+                        "browserTarget": "619_Street:build"
                     }
                 },
                 "test": {
@@ -105,5 +105,5 @@
             }
         }
     },
-    "defaultProject": "Tunisien-Street"
+    "defaultProject": "619_Street"
 }
