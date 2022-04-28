@@ -146,6 +146,8 @@
     height: 26px;
     text-align: center;
     line-height: 26px;
+
+    border: 1px solid $col-white;
     font-size: 14px;
     display: inline-block;
     color: $col-black;
@@ -172,6 +174,7 @@
     height: 20px;
     font-size: $fs-small;
     border-radius: 50%;
+    border: solid 5px transparent;
     margin: 0 5px;
     transition: all 0.1s;
     cursor: pointer;
@@ -179,8 +182,7 @@
 .container .card .contentBx .color {
     span:hover,
     span.active {
-        width: 25px;
-        height: 25px;
+        border: solid 5px $col-white;
     }
 }
 .container .card .contentBx .price span {
