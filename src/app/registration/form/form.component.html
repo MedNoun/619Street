@@ -13,7 +13,19 @@
                         <input
                             class="input-field"
                             type="text"
-                            placeholder="Full name"
+                            placeholder="First name"
+                            required
+                        />
+                    </div>
+                    <div class="input-box">
+                        <span class="span">
+                            <i class="fa-solid fa-user fa-xs icon"></i
+                        ></span>
+
+                        <input
+                            class="input-field"
+                            type="text"
+                            placeholder="Last name"
                             required
                         />
                     </div>
@@ -55,6 +67,19 @@
                     </div>
                     <div class="input-box">
                         <span class="span"
+                            >
+                            <i class="fa-solid fa-address-card fa-xs icon "></i>                        </span>
+                        <label for="status"></label>
+
+                        <select name="status" id="names">
+                            <option value="  user" class="option">   User</option>
+                            <option value="  seller" class="option" >Seller</option>
+                        </select>
+                    
+                    </div>
+             
+                    <div class="input-box">
+                        <span class="span"
                             ><i class="fa fa-key fa-xs icon"></i
                         ></span>
 
@@ -76,13 +101,11 @@
                             required
                         />
                     </div>
+                    
+                   
                 </div>
-                <div class="button">
-                    <input type="submit" value="Register" />
-                </div>
-                <div class="login-button">
-                    <input type="submit" value="Login" />
-                </div>
+                
+<app-buttons></app-buttons>
             </form>
         </div>
     </div>

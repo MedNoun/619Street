@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import "../../../../styles.scss";
+
+
+.button {
+    height: 60px;
+    margin: 5% 0;
+}
+.button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: $col-white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $col_black;
+}
+ .button input:hover {
+    /* transform: scale(0.99); */
+    background: $col_white;
+    color: $col-black;
+    border-color: $col-black;
+}
+
+.login-button {
+    height: 60px;
+    margin: 5% 0;
+}
+.login-button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: $col_black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $col_white;
+    border-color: $col_black;
+}
+ .login-button input:hover {
+    /* transform: scale(0.99); */
+    background: $col_black;
+    color: $col_white;
+}

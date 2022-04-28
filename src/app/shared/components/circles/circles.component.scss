@@ -1,0 +1,35 @@
+#visual01 {
+    margin-top: -15%;
+    margin-left: 80%;
+    width: 25%;
+}
+
+
+
+@media screen and (max-width: 400px) {
+  
+    #visual01 {
+        margin-top: -20%;
+        margin-left: 90%;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 710px) and (max-width: 990px) {
+
+    #visual01 {
+        margin-top: -20%;
+        margin-left: 79%;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    
+
+    #visual01 {
+        margin-top: -17%;
+        margin-left: 85%;
+        width: 35%;
+    }
+}
