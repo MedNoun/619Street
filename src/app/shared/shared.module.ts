@@ -9,6 +9,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { BlobComponent } from './components/blob/blob.component';
 import { CirclesComponent } from './components/circles/circles.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -19,10 +20,9 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
         CarouselComponent,
         BlobComponent,
         CirclesComponent,
-        
         CheckboxComponent
     ],
-    imports: [CommonModule, DatafetcherModule],
+    imports: [CommonModule, DatafetcherModule, ReactiveFormsModule],
     providers: [],
     exports: [
         CommonModule,

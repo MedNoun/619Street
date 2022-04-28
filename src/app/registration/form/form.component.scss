@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import "../../../styles.scss";
-
-<<<<<<< HEAD
-
 *{
   margin: 0;
   padding: 0;
@@ -30,34 +27,6 @@ body{
   text-align: center;
 }
 .container .subtitle{
-=======
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-body {
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10%;
-}
-.container {
-    max-width: 50%;
-    width: 90%;
-    background: none;
-    padding: 10% 2%;
-    border-radius: 5px;
-}
-.container .title {
-    font-size: $fs_medium;
-    font-weight: 500;
-    position: relative;
-    text-align: center;
-}
-.container .subtitle {
->>>>>>> c2c942d87d530f038b38719cc31fe81e176ea706
     font-size: $fs_small;
     font-weight: 500;
     position: relative;

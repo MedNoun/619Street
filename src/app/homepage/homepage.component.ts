@@ -14,5 +14,8 @@ export class HomepageComponent implements OnInit {
             this.content = value;
         });
     }
+    getItem(e) {
+        console.log(e);
+    }
     ngOnInit(): void {}
 }
