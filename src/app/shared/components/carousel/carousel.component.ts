@@ -27,7 +27,6 @@ export class CarouselComponent implements OnInit {
     ngOnInit(): void {
         this.setBrand(this.selectedIndex);
         this.images = this.carousel.images;
-        console.log(this.carousel);
         if (this.autoSlide) {
             this.autoSlideImages();
         }
