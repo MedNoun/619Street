@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginModule } from '../login/login.module';
 import { CatalogueModule } from '../catalogue/catalogue.module';
 import { ProductModule } from '../product/product.module';
+import { BaseModule } from '../base/base.module';
 
 @NgModule({
     declarations: [],
@@ -14,9 +15,12 @@ import { ProductModule } from '../product/product.module';
         LoginModule,
         RegistrationModule,
         CatalogueModule,
-        ProductModule
+        ProductModule,
+        BaseModule
     ],
     exports: [
+        SharedModule,
+        BaseModule,
         HomepageModule,
         LoginModule,
         RegistrationModule,

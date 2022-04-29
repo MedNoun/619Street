@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {
+    HttpClient,
+    HttpErrorResponse,
+    HttpParams
+} from '@angular/common/http';
 import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { Observable, throwError } from 'rxjs';
@@ -7,6 +11,7 @@ import * as login from 'src/app/classes/fetchers/login/content';
 import * as registration from 'src/app/classes/fetchers/registration/content';
 import * as productView from 'src/app/classes/fetchers/productView/content';
 import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
+import { product } from 'src/app/classes/models/product';
 @Injectable()
 export class ApiService {
     private Url = 'http://localhost:3000/populator';
@@ -27,7 +32,11 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
-
+    getShared(): Observable<any> {
+        return this.http
+            .get<content>(this.Url + '/shared')
+            .pipe(catchError(this.handleError));
+    }
     getLogin(): Observable<any> {
         return this.http
             .get<login.content>(this.Url + '/login')
@@ -47,6 +56,13 @@ export class ApiService {
     getProductVew(): Observable<any> {
         return this.http
             .get<productView.content>(this.Url + '/productView')
+            .pipe(catchError(this.handleError));
+    }
+
+    getProducts(): Observable<any> {
+        const params = new HttpParams().set('opt', 1);
+        return this.http
+            .get<product>(this.Url + '/products', { params })
             .pipe(catchError(this.handleError));
     }
 }

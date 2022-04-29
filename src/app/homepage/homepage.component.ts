@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 import { content } from '../classes/fetchers/homepage/content';
-import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
     selector: 'app-homepage',
@@ -10,10 +9,13 @@ import { ApiService } from '../datafetcher/service/api.service';
 })
 export class HomepageComponent implements OnInit {
     public content: content;
-    constructor(private api: ApiService) {
-        api.getHomepage().subscribe((value) => {
-            this.content = value;
+    constructor(private readonly activatedRoute: ActivatedRoute) {}
+    getItem(e) {
+        console.log(e);
+    }
+    ngOnInit(): void {
+        this.activatedRoute.data.subscribe((data: { content: content }) => {
+            this.content = data.content;
         });
     }
-    ngOnInit(): void {}
 }

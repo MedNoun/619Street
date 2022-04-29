@@ -1,7 +1,7 @@
 <div class="bigcard">
     <div class="container">
         <div class="card" attr.data-after-content="{{ card.name }}">
-            <div class="imgBx">
+            <div class="imgBx" (click)="naveProduct()">
                 <img src="{{ card.url }}" alt="nike-air-shoe" />
             </div>
 
@@ -10,21 +10,33 @@
 
                 <div class="size">
                     <h3>Size :</h3>
-                    <span *ngFor="let item of card.sizes">{{ item }}</span>
+
+                    <span
+                        #size
+                        *ngFor="let item of card.sizes"
+                        (click)="inputs.size = item"
+                        [ngClass]="inputs.size === item ? 'active' : ''"
+                        >{{ item }}</span
+                    >
                 </div>
 
                 <div class="color">
                     <h3>Color :</h3>
+
                     <span
+                        (click)="inputs.color = item"
+                        [ngClass]="inputs.color === item ? 'active' : ''"
                         *ngFor="let item of card.colors"
                         [style.background-color]="item"
                     ></span>
                 </div>
                 <div class="price">
                     <h3>Price :</h3>
-                    <span>{{ card.price }}</span>
+                    <span>{{ card.price + "TND" }}</span>
                 </div>
-                <div class="button"><a href="">Buy Now</a></div>
+                <div class="button">
+                    <a (click)="addToCart()">{{ btnContent }}</a>
+                </div>
             </div>
         </div>
     </div>

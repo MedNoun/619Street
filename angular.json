@@ -1,9 +1,12 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "analytics": false
+    },
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "Tunisien-Street": {
+        "619_Street": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -20,7 +23,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/Tunisien-Street",
+                        "outputPath": "dist/619_Street",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -28,12 +31,7 @@
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.scss"],
-                        "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js",
-                            "src/assets/nav-animations/perlin.js",
-                            "src/assets/nav-animations/script.js",
-                            "src/assets/footer/script.js"
-                        ]
+                        "scripts": ["node_modules/jquery/dist/jquery.min.js"]
                     },
                     "configurations": {
                         "production": {
@@ -72,10 +70,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "Tunisien-Street:build:production"
+                            "browserTarget": "619_Street:build:production"
                         },
                         "development": {
-                            "browserTarget": "Tunisien-Street:build:development"
+                            "browserTarget": "619_Street:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -83,7 +81,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "Tunisien-Street:build"
+                        "browserTarget": "619_Street:build"
                     }
                 },
                 "test": {
@@ -102,5 +100,5 @@
             }
         }
     },
-    "defaultProject": "Tunisien-Street"
+    "defaultProject": "619_Street"
 }

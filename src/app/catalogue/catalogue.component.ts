@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { catalogue } from '../classes/fetchers/catalogue/catalogue';
 import { content } from '../classes/fetchers/homepage/content';
 import { ApiService } from '../datafetcher/service/api.service';
@@ -10,16 +11,14 @@ import { ApiService } from '../datafetcher/service/api.service';
 })
 export class CatalogueComponent implements OnInit {
     public filters: catalogue = new catalogue();
-    public content: content;
-    constructor(private api: ApiService) {
-        api.getCatalogue().subscribe((value) => {
-            this.filters = value;
-            console.log(value);
-        });
-    }
+    constructor(private readonly activatedRoute: ActivatedRoute) {}
     filter(e) {
         console.log('I am in filter', e);
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.activatedRoute.data.subscribe((data: { content: catalogue }) => {
+            this.filters = data.content;
+        });
+    }
 }

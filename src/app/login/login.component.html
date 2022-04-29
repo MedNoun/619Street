@@ -1,35 +1,4 @@
-<div class="section">
-    <app-navbar class="navbar" [navbar]="content.navbar"></app-navbar>
-    <app-form class="form" [form]="content.form"></app-form>
-    <div class="container">
-        <svg
-            id="visual01"
-            viewBox="0 0 400 400"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-        >
-            <g fill="#001220">
-                <circle r="90" cx="30%" cy="75%"></circle>
-                <circle r="35" cx="10%" cy="40%"></circle>
-            </g>
-        </svg>
-    </div>
-    <svg
-        id="visual02"
-        class="unvisible"
-        viewBox="0 0 400 400"
-        width="400"
-        height="400"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        version="1.1"
-    >
-        <g transform="translate(25.565515357867277 400.62754191606825)">
-            <path
-                d="M80.8 -78.9C102.6 -58.9 116.8 -29.5 118.9 2.1C121 33.7 111.1 67.4 89.2 84.1C67.4 100.7 33.7 100.4 -3.8 104.1C-41.2 107.9 -82.5 115.8 -115.8 99.2C-149.2 82.5 -174.6 41.2 -169.7 4.8C-164.9 -31.6 -129.8 -63.2 -96.5 -83.2C-63.2 -103.2 -31.6 -111.6 -1.1 -110.5C29.5 -109.5 58.9 -98.9 80.8 -78.9"
-                fill="#222831"
-            ></path>
-        </g>
-    </svg>
+<div class="content-home">
+    <app-form [form]="content.form"></app-form>
+    <app-circles class="circles"></app-circles>
 </div>

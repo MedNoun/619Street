@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap");
 
 @font-face {
     font-family: "sprite";
@@ -11,6 +12,7 @@
     font-family: "36days";
     src: url("assets/fonts/36Days-Regular.ttf");
 }
+$fs_xsmall: clamp(0.5rem, calc(1.5vw + 0.5rem), 1rem);
 $fs_small: clamp(1.2rem, calc(1.5vw + 1rem), 2rem);
 $fs_medium: clamp(2rem, calc(1.5vw + 1rem), 3.5rem);
 $fs_large: clamp(3rem, calc(1.5vw + 3rem), 4rem);
@@ -78,6 +80,9 @@ element::-webkit-scrollbar {
 }
 .section {
     height: 100vh;
+}
+.content-home {
+    margin-top: 150px;
 }
 
 @media (max-width: 900px) {

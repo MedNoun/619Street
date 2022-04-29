@@ -47,32 +47,35 @@ form .user-details .input-box {
 }
 
 .span {
-    margin-top: 2px;
     background: $col-black;
     color: white;
     width: 30%;
     text-align: center;
-    height: 66px;
+    height: 68px;
     border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 .input-field {
     width: 200%;
     padding: 10px;
-    outline: none;
 }
 
 form .input-box span.details {
     display: block;
     margin-bottom: 5px;
-    font-size: $fs_small;
+    font-size: $fs_xsmall;
     color: white;
 }
 .user-details .input-box input {
     height: 45px;
     width: 100%;
-    outline: none;
-    font-size: $fs_small;
+    font-size: $fs_xsmall;
     border-radius: 5px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     padding-left: 15px;
     border: 1px solid #ccc;
     border-bottom-width: 2px;
@@ -85,51 +88,7 @@ form .input-box span.details {
     border-color: #010014;
 }
 
-form .button {
-    height: 60px;
-    margin: 5% 0;
-}
-form .button input {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    color: $col-white;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: $col_black;
-}
-form .button input:hover {
-    /* transform: scale(0.99); */
-    background: $col_white;
-    color: $col-black;
-    border-color: $col-black;
-}
 
-form .login-button {
-    height: 60px;
-    margin: 5% 0;
-}
-form .login-button input {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    color: $col_black;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: $col_white;
-    border-color: $col_black;
-}
-form .login-button input:hover {
-    /* transform: scale(0.99); */
-    background: $col_black;
-    color: $col_white;
-}
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
