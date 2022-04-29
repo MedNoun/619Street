@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { content } from '../classes/fetchers/homepage/content';
 import { ApiService } from '../datafetcher/service/api.service';
 
