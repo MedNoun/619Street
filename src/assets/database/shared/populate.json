@@ -39,7 +39,7 @@
   },
   "cards": [
     {
-      "id": "nike",
+      "id": "1",
       "name": "blow",
       "type": "sneakers",
       "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
@@ -48,7 +48,7 @@
       "colors": ["green", "blue", "yellow"]
     },
     {
-      "id": "nike2",
+      "id": "2",
       "name": "nikee",
       "type": "sneakers",
       "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
@@ -57,7 +57,7 @@
       "colors": ["green", "blue", "yellow"]
     },
     {
-      "id": "nike3",
+      "id": "3",
       "name": "nikee",
       "type": "sneakers",
       "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
@@ -66,7 +66,7 @@
       "colors": ["green", "blue", "yellow"]
     },
     {
-      "id": "nike3",
+      "id": "4",
       "name": "nikee",
       "type": "sneakers",
       "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5446.png",
@@ -75,7 +75,7 @@
       "colors": ["green", "blue", "yellow"]
     },
     {
-      "id": "nike3",
+      "id": "5",
       "name": "nikee",
       "type": "sneakers",
       "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
@@ -84,10 +84,37 @@
       "colors": ["green", "blue", "yellow"]
     },
     {
-      "id": "nike3",
+      "id": "6",
       "name": "nikee",
       "type": "sneakers",
       "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "7",
+      "name": "blow",
+      "type": "sneakers",
+      "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "8",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "9",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
       "price": 35,
       "sizes": [7, 8, 9, 10],
       "colors": ["green", "blue", "yellow"]

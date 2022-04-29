@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from "@nestjs/common";
 import { PopulatorService } from "./populator.service";
 import { CreatePopulatorDto } from "./dto/create-populator.dto";
@@ -25,8 +26,10 @@ export class PopulatorController {
     return this.populatorService.findAll();
   }
   @Get(":id")
-  findOne(@Param("id") id: string) {
-    return this.populatorService.findOne(id);
+  findOne(@Param("id") id: string, @Query("opt") opt: string) {
+    return opt
+      ? this.populatorService.findOneLeight(id)
+      : this.populatorService.findOne(id);
   }
   @Patch(":id")
   update(

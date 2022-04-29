@@ -21,43 +21,8 @@
         "price": 35,
         "sizes": [7],
         "colors": ["green"]
-      },
-      {
-        "id": "nike3",
-        "name": "nikee",
-        "type": "sneakers",
-        "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
-        "price": 35,
-        "sizes": [7],
-        "colors": ["green"]
-      },
-      {
-        "id": "nike3",
-        "name": "nikee",
-        "type": "sneakers",
-        "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5446.png",
-        "price": 35,
-        "sizes": [7],
-        "colors": ["blue"]
-      },
-      {
-        "id": "nike3",
-        "name": "nikee",
-        "type": "sneakers",
-        "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
-        "price": 35,
-        "sizes": [7],
-        "colors": ["yellow"]
-      },
-      {
-        "id": "nike3",
-        "name": "nikee",
-        "type": "sneakers",
-        "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
-        "price": 35,
-        "sizes": [7],
-        "colors": ["yellow"]
       }
+    
     ],
     "footer": {
       "logo": "619 Street",

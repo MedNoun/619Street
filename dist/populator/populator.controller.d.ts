@@ -6,7 +6,7 @@ export declare class PopulatorController {
     constructor(populatorService: PopulatorService);
     create(createPopulatorDto: CreatePopulatorDto): string;
     findAll(): string;
-    findOne(id: string): any;
+    findOne(id: string, opt: string): any;
     update(id: string, updatePopulatorDto: UpdatePopulatorDto): string;
     remove(id: string): string;
 }
