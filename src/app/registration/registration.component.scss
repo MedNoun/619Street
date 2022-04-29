@@ -1,38 +1,6 @@
 @import "../../styles.scss";
 
-
-
-@media screen and (max-width: 700px) {
-    .section {
-        height: 100vh;
-    }
-    #visual01 {
-        margin-top: -20%;
-        margin-left: 70%;
-        width: 39%;
-    }
-}
-
-@media screen and (min-width: 710px) and (max-width: 990px) {
-    .section {
-        height: 100vh;
-    }
-
-    #visual01 {
-        margin-top: -20%;
-        margin-left: 79%;
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-    .section {
-        height: 100vh;
-    }
-
-    #visual01 {
-        margin-top: -17%;
-        margin-left: 85%;
-        width: 35%;
-    }
+.section {
+    max-height: 100vh;
+    overflow: hidden;
 }
