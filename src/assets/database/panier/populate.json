@@ -1,0 +1,136 @@
+{  
+    "navbar": {
+      "brand": "619Street",
+      "items": ["Homme", "Femme", "New Collection"]
+    },
+    "cards": [
+      {
+        "id": "nike",
+        "name": "blow",
+        "type": "sneakers",
+        "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["green"]
+      },
+      {
+        "id": "nike2",
+        "name": "nikee",
+        "type": "sneakers",
+        "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["green"]
+      },
+      {
+        "id": "nike3",
+        "name": "nikee",
+        "type": "sneakers",
+        "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["green"]
+      },
+      {
+        "id": "nike3",
+        "name": "nikee",
+        "type": "sneakers",
+        "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5446.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["blue"]
+      },
+      {
+        "id": "nike3",
+        "name": "nikee",
+        "type": "sneakers",
+        "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["yellow"]
+      },
+      {
+        "id": "nike3",
+        "name": "nikee",
+        "type": "sneakers",
+        "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+        "price": 35,
+        "sizes": [7],
+        "colors": ["yellow"]
+      }
+    ],
+    "footer": {
+      "logo": "619 Street",
+      "socials": {
+        "id": "socials",
+        "title": "socials",
+        "links": [
+          {
+            "href": "",
+            "text": "fab fa-facebook-f"
+          },
+          {
+            "href": "",
+            "text": "fab fa-twitter"
+          },
+          {
+            "href": "",
+            "text": "fab fa-linkedin-in"
+          },
+          {
+            "href": "",
+            "text": "fab fa-instagram"
+          }
+        ]
+      },
+  
+      "adr": {
+        "id": "address",
+        "title": "Office Location",
+        "adresses": [
+          {
+            "icon": "far fa-building",
+            "address": "Los Angeles\nOffice 9B, Sky High Tower, New A Ring Road, Los Angeles"
+          },
+          {
+            "icon": "fas fa-gopuram",
+            "address": "Delhi\nOffice 150B, Behind Sana Gate Char Bhuja Tower, Station Road, Delhi"
+          }
+        ]
+      },
+      "rows": [
+        {
+          "arr": [
+            {
+              "id": "1",
+              "title": "solution",
+              "links": [
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" }
+              ]
+            },
+            {
+              "id": "2",
+              "title": "solution",
+              "links": [
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" }
+              ]
+            },
+            {
+              "id": "3",
+              "title": "solution",
+              "links": [
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" },
+                { "href": "", "text": "App dev" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
