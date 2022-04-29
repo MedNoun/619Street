@@ -8,30 +8,41 @@ import { LoginComponent } from './login/login.component';
 import { ProductViewComponent } from './product/product-view/product-view.component';
 import { ProductResolverService } from './product/services/product-resolver.service';
 import { RegistrationComponent } from './registration/registration.component';
+import { BaseComponent } from './base/base.component';
+import { BaseResolverService } from './base/services/base-resolver.service';
 
 const routes: Routes = [
     {
         path: '',
-        component: HomepageComponent,
-        resolve: { content: HomepageResolverService }
-    },
-    {
-        path: 'catalogue',
-        component: CatalogueComponent,
-        resolve: { content: CatalogueResolverService }
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
-        path: 'register',
-        component: RegistrationComponent
-    },
-    {
-        path: 'product/:id',
-        component: ProductViewComponent,
-        resolve: { data: ProductResolverService }
+        component: BaseComponent,
+        resolve: {
+            content: BaseResolverService
+        },
+        children: [
+            {
+                path: 'homepage',
+                component: HomepageComponent,
+                resolve: { content: HomepageResolverService }
+            },
+            {
+                path: 'catalogue',
+                component: CatalogueComponent,
+                resolve: { content: CatalogueResolverService }
+            },
+            {
+                path: 'login',
+                component: LoginComponent
+            },
+            {
+                path: 'register',
+                component: RegistrationComponent
+            },
+            {
+                path: 'product/:id',
+                component: ProductViewComponent,
+                resolve: { data: ProductResolverService }
+            }
+        ]
     }
 ];
 

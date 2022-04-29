@@ -1,0 +1,22 @@
+@import "../../styles.scss";
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+* {
+    box-sizing: inherit;
+    font-size: $fs_medium;
+}
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.navbar-container {
+    position: absolute;
+    min-width: 100%;
+    z-index: 100;
+}
+.content {
+    top: 100px;
+}

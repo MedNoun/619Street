@@ -32,7 +32,11 @@ export class ApiService {
             .get<content>(this.Url + '/homepage')
             .pipe(catchError(this.handleError));
     }
-
+    getShared(): Observable<any> {
+        return this.http
+            .get<content>(this.Url + '/shared')
+            .pipe(catchError(this.handleError));
+    }
     getLogin(): Observable<any> {
         return this.http
             .get<login.content>(this.Url + '/login')
