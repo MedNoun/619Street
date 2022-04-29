@@ -18,8 +18,8 @@ var gooSlider = function (parent, id) {
     var canvas = $("canvas")
         .attr({ width: size.x, height: size.y, id: id })
         .appendTo(parent);
-    console.log(canvas);
-    context = canvas.get(0).getContext("2d");
+    var canva = canvas.get(0);
+    context = canva.getContext("2d");
 
     var startTime = new Date().getTime(); // timing stuff
     var currentTime = 0; // more timing, it just makes it so it always falls at the same rate
@@ -41,8 +41,8 @@ var gooSlider = function (parent, id) {
             callback: call,
             defaults: {
                 color: "#99db81",
-                minSpeed: 1.2,
-                maxSpeed: 1.2
+                minSpeed: 5,
+                maxSpeed: 6
             },
             settings: {}
         };

@@ -11,7 +11,8 @@ import { CirclesComponent } from './components/circles/circles.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ScriptService } from '../script/script.service';
 
 @NgModule({
     declarations: [
@@ -24,10 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CirclesComponent,
         CheckboxComponent,
         ButtonsComponent
-
     ],
     imports: [CommonModule, DatafetcherModule, ReactiveFormsModule],
-    providers: [],
+    providers: [ScriptService],
     exports: [
         CommonModule,
         NavbarComponent,
@@ -39,7 +39,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CirclesComponent,
         CheckboxComponent,
         ButtonsComponent
-
     ]
 })
 export class SharedModule {}
