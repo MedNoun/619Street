@@ -1,4 +1,3 @@
-import * as a from '../../assets/nav-animations/script.js';
 interface Scripts {
     name: string;
     src: string;

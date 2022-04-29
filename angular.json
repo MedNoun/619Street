@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "cli": {
-      "analytics": false
+        "analytics": false
     },
     "version": 1,
     "newProjectRoot": "projects",
@@ -31,12 +31,7 @@
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.scss"],
-                        "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js",
-                            "src/assets/nav-animations/perlin.js",
-                            "src/assets/nav-animations/script.js",
-                            "src/assets/footer/script.js"
-                        ]
+                        "scripts": ["node_modules/jquery/dist/jquery.min.js"]
                     },
                     "configurations": {
                         "production": {

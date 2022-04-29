@@ -16,12 +16,11 @@ jQuery(function () {
             y: $(parent).height()
         };
 
-        var canvas = $("#canvas")
+        var context = $("#canvas")
             .attr({ width: size.x, height: size.y, id: id })
-            .appendTo(parent);
-        var canva = canvas.get(0);
-        context = canva.getContext("2d");
-
+            .appendTo(parent)
+            .get(0)
+            .getContext("2d");
         var startTime = new Date().getTime(); // timing stuff
         var currentTime = 0; // more timing, it just makes it so it always falls at the same rate
 
@@ -43,8 +42,8 @@ jQuery(function () {
                 callback: call,
                 defaults: {
                     color: "#99db81",
-                    minSpeed: 5,
-                    maxSpeed: 5
+                    minSpeed: 10,
+                    maxSpeed: 10
                 },
                 settings: {}
             };
