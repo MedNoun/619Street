@@ -17,6 +17,9 @@ export class PopulatorService {
   findOne(id: string) {
     return this.repository.findOnePopulate(id);
   }
+  findOneLeight(id: string) {
+    return this.repository.findOnePopulateLeight(id);
+  }
 
   update(id: number, updatePopulatorDto: UpdatePopulatorDto) {
     return `This action updates a #${id} populator`;

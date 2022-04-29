@@ -25,6 +25,9 @@ let PopulatorService = class PopulatorService {
     findOne(id) {
         return this.repository.findOnePopulate(id);
     }
+    findOneLeight(id) {
+        return this.repository.findOnePopulateLeight(id);
+    }
     update(id, updatePopulatorDto) {
         return `This action updates a #${id} populator`;
     }
