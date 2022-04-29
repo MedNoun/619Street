@@ -42,7 +42,7 @@ var gooSlider = function (parent, id) {
             defaults: {
                 color: "#99db81",
                 minSpeed: 5,
-                maxSpeed: 6
+                maxSpeed: 5
             },
             settings: {}
         };
@@ -145,6 +145,7 @@ jQuery(function () {
     var l1, l2;
     $(".fa-bars").on("click", function () {
         $("canvas").removeClass("unvisible");
+        $("header").hide();
         $(".nav-items").fadeIn();
 
         //var c = "hsla(" + Math.floor(Math.random() * 7) * 50 + ",56%,68%,1);
@@ -160,11 +161,10 @@ jQuery(function () {
         });
         setTimeout(() => {
             $("canvas").addClass("unvisible");
-            $("header").hide();
-        }, 600);
+        }, 450);
         setTimeout(() => {
-            $("header").fadeIn(800);
-        }, 600);
+            $("header").fadeIn(600);
+        }, 450);
 
         //var c = "hsla(" + Math.floor(Math.random() * 7) * 50 + ",56%,68%,1);
     });
