@@ -1,6 +1,9 @@
 import { ApiService } from './../../datafetcher/service/api.service';
 import { Component, OnInit } from '@angular/core';
 import { content } from 'src/app/classes/fetchers/productView/content';
+import { ActivatedRoute } from '@angular/router';
+import { product } from 'src/app/classes/models/product';
+import * as _ from 'lodash';
 
 @Component({
     selector: 'app-product-view',
@@ -9,13 +12,21 @@ import { content } from 'src/app/classes/fetchers/productView/content';
 })
 export class ProductViewComponent implements OnInit {
     public content: content;
-    constructor(private api: ApiService) {
+    public product: product;
+    constructor(
+        private readonly api: ApiService,
+        private readonly activatedRoute: ActivatedRoute
+    ) {
         api.getProductVew().subscribe((value) => {
             this.content = value;
-            console.log("content :" ,this.content),
-            console.log("value :" ,value) 
         });
     }
     public ngStyle = { height: '100vh !important' };
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.activatedRoute.data.subscribe((data: { data: { products } }) => {
+            this.product = _.find(data.data.products, {
+                id: this.activatedRoute.snapshot.params['id']
+            });
+        });
+    }
 }
