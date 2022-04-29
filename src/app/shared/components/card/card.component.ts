@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { card } from 'src/app/classes/fetchers/shared/card';
 
 class submit {
@@ -28,10 +29,15 @@ export class CardComponent implements OnInit {
         color: new FormControl(),
         price: new FormControl()
     });
+
+    constructor(private readonly router: Router) {}
     ngOnInit(): void {
         if (this.card.price) {
             this.inputs.price = this.card.price;
         }
+    }
+    naveProduct() {
+        this.router.navigateByUrl('product/' + this.card.id);
     }
     addToCart() {
         this.form.setValue({
