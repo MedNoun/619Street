@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { content } from '../classes/fetchers/registration/content';
-import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
     selector: 'app-registration',
@@ -9,10 +9,10 @@ import { ApiService } from '../datafetcher/service/api.service';
 })
 export class RegistrationComponent implements OnInit {
     public content: content;
-    constructor(private api: ApiService) {
-        api.getRegistration().subscribe((value) => {
-            this.content = value;
+    constructor(private readonly activatedRoute: ActivatedRoute) {}
+    ngOnInit(): void {
+        this.activatedRoute.data.subscribe((data: { content: content }) => {
+            this.content = data.content;
         });
     }
-    ngOnInit(): void {}
 }

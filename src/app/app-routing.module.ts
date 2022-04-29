@@ -10,6 +10,8 @@ import { ProductResolverService } from './product/services/product-resolver.serv
 import { RegistrationComponent } from './registration/registration.component';
 import { BaseComponent } from './base/base.component';
 import { BaseResolverService } from './base/services/base-resolver.service';
+import { LoginResolverService } from './login/services/loginResolver.service';
+import { RegisterResolverService } from './registration/services/registerResolver.service';
 
 const routes: Routes = [
     {
@@ -31,11 +33,13 @@ const routes: Routes = [
             },
             {
                 path: 'login',
-                component: LoginComponent
+                component: LoginComponent,
+                resolve: { content: LoginResolverService }
             },
             {
                 path: 'register',
-                component: RegistrationComponent
+                component: RegistrationComponent,
+                resolve: { content: RegisterResolverService }
             },
             {
                 path: 'product/:id',
