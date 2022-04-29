@@ -16,8 +16,6 @@ export class BaseComponent implements OnInit {
         this.activatedRoute.data.subscribe(
             (data: { content: { navbar: navbar } }) => {
                 this.navbar = data.content.navbar;
-                console.log(router.url);
-                console.log('heeereee : ', data);
             }
         );
     }
