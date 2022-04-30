@@ -11,9 +11,10 @@ import { CirclesComponent } from './components/circles/circles.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScriptService } from '../script/script.service';
 import { AngularTiltModule } from 'angular-tilt';
+import { OrderService } from './services/order.service';
 
 @NgModule({
     declarations: [
@@ -25,16 +26,16 @@ import { AngularTiltModule } from 'angular-tilt';
         BlobComponent,
         CirclesComponent,
         CheckboxComponent,
-
         ButtonsComponent
     ],
     imports: [
         CommonModule,
         DatafetcherModule,
         ReactiveFormsModule,
+        FormsModule,
         AngularTiltModule
     ],
-    providers: [ScriptService],
+    providers: [ScriptService, OrderService],
     exports: [
         CommonModule,
         NavbarComponent,

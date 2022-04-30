@@ -7,6 +7,3 @@ export interface product {
     sizes: number[];
     colors: string[];
 }
-export interface products {
-    products: product[];
-}

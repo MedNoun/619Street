@@ -3,7 +3,7 @@
     <i class="fas fa-times nav-item"></i>
     <li class="nav-item" *ngFor="let item of navbar.items">{{ item }}</li>
 </div>
-<header id="header">
+<header class="navbar isVisible" id="header">
     <nav>
         <ul>
             <li class="brand">
@@ -17,7 +17,11 @@
                 <div class="user-icon">
                     <i class="far fa-user"></i>
                 </div>
-                <div class="bucket">
+                <div
+                    class="bucket"
+                    [attr.data-after-content]="numberItems + ''"
+                    name="hello"
+                >
                     <img
                         class="fas"
                         src="../assets/Icons/paint-bucket.png"

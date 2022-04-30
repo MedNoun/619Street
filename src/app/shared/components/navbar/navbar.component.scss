@@ -5,9 +5,30 @@
     top: -450px;
     left: -190px;
 }
+.animation {
+    position: absolute;
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+.isVisible {
+    background-color: rgba(200, 200, 200, 0.604);
+    top: 0;
+}
+.animate {
+    top: -160px;
+}
+
+.sticky {
+    top: 0;
+}
 
 header {
     position: relative;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    transition: top 0.5s, background-color 1.5s;
     z-index: 2;
 }
 
@@ -32,7 +53,7 @@ nav {
     }
 }
 .nav-items {
-    position: absolute;
+    position: sticky;
     flex-direction: column;
     justify-content: center;
     padding-top: 15vh;
@@ -49,8 +70,35 @@ nav {
     margin: 1.5rem auto 0rem 15vw;
     font-size: $fs_medium;
 }
-.bucket img {
-    width: $fs_medium;
+
+.bucket {
+    img {
+        width: $fs_medium;
+    }
+    &:hover {
+        &::after {
+            transition: all 0.2s;
+            color: $col_white;
+            background: $col-black;
+        }
+    }
+    &::after {
+        content: attr(data-after-content);
+        font-size: $fs-xsmall;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px $col-black;
+        font-family: "sprite";
+        height: 25px;
+        border-radius: 50%;
+        color: $col-black;
+        width: 25px;
+        position: absolute;
+        right: 0;
+        background: $col-white;
+        top: 55%;
+    }
 }
 i.nav-item {
     margin-right: 0vw;
