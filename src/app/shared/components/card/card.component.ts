@@ -20,6 +20,7 @@ export class CardComponent implements OnInit {
     @Input('card') card: card;
     @Output('submit') submition: EventEmitter<submit> = new EventEmitter();
     btnContent = 'Add';
+    tiltSettings;
     inputs: submit = new submit();
     form = new FormGroup({
         id: new FormControl(),
@@ -32,6 +33,16 @@ export class CardComponent implements OnInit {
 
     constructor(private readonly router: Router) {}
     ngOnInit(): void {
+        this.tiltSettings = {
+            reverse: true,
+            max: 15,
+            speed: 5000,
+            scale: '1.1',
+            transition: true,
+            gyroscope: true,
+            glare: true,
+            'max-glare': 0.1
+        };
         if (this.card.price) {
             this.inputs.price = this.card.price;
         }

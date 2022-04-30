@@ -4,10 +4,14 @@
     <li class="nav-item" *ngFor="let item of navbar.items">{{ item }}</li>
 </div>
 <header id="header">
-    <app-blob id="blob"></app-blob>
     <nav>
         <ul>
-            <li class="brand">{{ navbar.brand }}</li>
+            <li class="brand">
+                <div class="blob-container">
+                    <app-blob id="blob"></app-blob>
+                </div>
+                {{ navbar.brand }}
+            </li>
 
             <div class="items">
                 <div class="user-icon">

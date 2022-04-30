@@ -3,7 +3,10 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
 * {
     box-sizing: inherit;
     font-size: $fs_medium;
@@ -17,4 +20,3 @@ body {
     min-width: 100%;
     z-index: 100;
 }
-

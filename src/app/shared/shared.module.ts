@@ -13,6 +13,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ScriptService } from '../script/script.service';
+import { AngularTiltModule } from 'angular-tilt';
 
 @NgModule({
     declarations: [
@@ -24,9 +25,15 @@ import { ScriptService } from '../script/script.service';
         BlobComponent,
         CirclesComponent,
         CheckboxComponent,
+
         ButtonsComponent
     ],
-    imports: [CommonModule, DatafetcherModule, ReactiveFormsModule],
+    imports: [
+        CommonModule,
+        DatafetcherModule,
+        ReactiveFormsModule,
+        AngularTiltModule
+    ],
     providers: [ScriptService],
     exports: [
         CommonModule,

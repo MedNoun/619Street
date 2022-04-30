@@ -91,12 +91,12 @@ element::-webkit-scrollbar {
     }
 }
 @media (max-width: 578px) {
-    .user-icon {
-        color: $col_white;
-    }
 }
 @media (max-width: 500px) {
     .items {
-        flex-grow: 0.5;
+        flex-grow: 0.6;
+    }
+    .user-icon {
+        color: $col_white;
     }
 }
