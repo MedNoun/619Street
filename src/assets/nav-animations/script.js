@@ -42,8 +42,8 @@ jQuery(function () {
                 callback: call,
                 defaults: {
                     color: "#99db81",
-                    minSpeed: 30,
-                    maxSpeed: 30
+                    minSpeed: 50,
+                    maxSpeed: 50
                 },
                 settings: {}
             };
@@ -190,17 +190,16 @@ jQuery(function () {
         var c = "#e4e4e4";
         slider.wave(c, function () {});
 
-        $(".base").removeClass("hide-body");
-
         setTimeout(() => {
             $(".nav-items").fadeOut();
         });
         setTimeout(() => {
             $("canvas").addClass("unvisible");
-        }, 200);
+        }, 700);
         setTimeout(() => {
+            $(".base").removeClass("hide-body");
             $("header").fadeIn(600);
-        }, 200);
+        }, 700);
 
         //var c = "hsla(" + Math.floor(Math.random() * 7) * 50 + ",56%,68%,1);
     });
