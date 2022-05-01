@@ -1,7 +1,7 @@
 @import "../../../../styles.scss";
 #blob {
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     top: -450px;
     left: -190px;
 }
@@ -24,12 +24,16 @@
 }
 
 header {
-    position: relative;
     background-color: transparent;
     position: fixed;
     width: 100%;
     transition: top 0.5s, background-color 1.5s;
     z-index: 2;
+}
+.scale {
+    transition: all ease 0.8s;
+    border: 3px solid $col_white;
+    padding: 5px;
 }
 
 nav {
@@ -72,8 +76,12 @@ nav {
 }
 
 .bucket {
+    transition: all ease 0.3s;
+
     img {
         width: $fs_medium;
+        transition: all ease 0.8s;
+        border-radius: 50%;
     }
     &:hover {
         &::after {

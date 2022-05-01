@@ -3,7 +3,7 @@
     <i class="fas fa-times nav-item"></i>
     <li class="nav-item" *ngFor="let item of navbar.items">{{ item }}</li>
 </div>
-<header class="navbar isVisible" id="header">
+<header class="navbar" [ngClass]="{ sticky: change }" id="header">
     <nav>
         <ul>
             <li class="brand">
@@ -20,16 +20,19 @@
                 <div
                     class="bucket"
                     [attr.data-after-content]="numberItems + ''"
-                    name="hello"
                 >
                     <img
                         class="fas"
                         src="../assets/Icons/paint-bucket.png"
                         alt="shop-bucket"
+                        [ngClass]="{ scale: ad === 1 }"
                     />
                 </div>
                 <div class="humberger">
-                    <i class="fas fa-bars"></i>
+                    <i
+                        routerLinkActive="router-link-active"
+                        class="fas fa-bars"
+                    ></i>
                 </div>
             </div>
         </ul>

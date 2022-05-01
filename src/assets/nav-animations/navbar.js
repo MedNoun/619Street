@@ -2,7 +2,8 @@
 $(function () {
     var scroll = $(document).scrollTop();
     var navheight = $(".navbar").outerHeight();
-    $(window).scroll(function () {
+
+    $(window).on("scroll", function () {
         var scrolled = $(document).scrollTop();
         if (scrolled > 1) {
             $(".navbar").addClass("isVisible");

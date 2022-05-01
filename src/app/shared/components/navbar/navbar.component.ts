@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
     @Input('navbar') navbar: navbar;
     numberItems: number = 0;
     change: boolean = false;
+    ad: number = -1;
     constructor(
         private readonly scripty: ScriptService,
         private readonly orderService: OrderService
@@ -19,10 +20,23 @@ export class NavbarComponent implements OnInit {
         this.numberItems = orderService.length;
     }
 
+    animate() {
+        this.change = true;
+        this.ad = 1;
+        setTimeout(() => {
+            this.change = false;
+        }, 2000);
+        setTimeout(() => {
+            this.ad = -1;
+        }, 2200);
+    }
+
     ngOnInit(): void {
         //onchange of the current command
         this.orderService.onCurrentChange().subscribe((value) => {
             this.numberItems = value;
+
+            this.animate();
         });
     }
     ngAfterViewInit(): void {

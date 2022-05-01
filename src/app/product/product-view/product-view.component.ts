@@ -12,11 +12,13 @@ import * as _ from 'lodash';
 })
 export class ProductViewComponent implements OnInit {
     public content: content;
+    public liked: number = -1;
     public product: product;
     constructor(
         private readonly api: ApiService,
         private readonly activatedRoute: ActivatedRoute
     ) {
+        this.liked = -1;
         api.getProductVew().subscribe((value) => {
             this.content = value;
         });
@@ -28,5 +30,6 @@ export class ProductViewComponent implements OnInit {
                 id: this.activatedRoute.snapshot.params['id']
             });
         });
+        this.liked = this.product.liked;
     }
 }

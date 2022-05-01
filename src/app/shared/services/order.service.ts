@@ -8,14 +8,14 @@ import { cartItem } from 'src/app/classes/models/cartItem';
 })
 export class OrderService {
     currentCommand: cartItem[] = [];
-    currentCommandSubject: Subject<number> = new Subject<number>();
+    addedCommand: Subject<number> = new Subject<number>();
 
     constructor() {
         this.currentCommand = JSON.parse(localStorage.getItem('items') || '[]');
     }
 
     onCurrentChange() {
-        return this.currentCommandSubject.asObservable();
+        return this.addedCommand.asObservable();
     }
     get length(): number {
         return this.currentCommand.length;
@@ -25,8 +25,21 @@ export class OrderService {
     }
 
     add(item: cartItem) {
-        this.currentCommand.push(item);
-        this.currentCommandSubject.next(this.length);
+        const index: number = _.findIndex(this.currentCommand, (e) => {
+            return (
+                e.id === item.id &&
+                e.color === item.color &&
+                e.size === item.size
+            );
+        });
+
+        if (index === -1) {
+            this.currentCommand.push(item);
+        } else {
+            this.currentCommand[index].quantity += item.quantity;
+        }
+
+        this.addedCommand.next(this.length);
         this.syncItems();
     }
     syncItems() {
