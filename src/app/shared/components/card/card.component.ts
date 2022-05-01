@@ -18,6 +18,9 @@ class submit {
 })
 export class CardComponent implements OnInit {
     @Input('card') card: card;
+    @Input('heart') heart: boolean = false;
+    @Input('trash') trash: boolean = false;
+
     @Output('submit') submition: EventEmitter<submit> = new EventEmitter();
     btnContent = 'Add';
     inputs: submit = new submit();

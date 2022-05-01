@@ -13,6 +13,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ScriptService } from '../script/script.service';
+import { AnimatedLikeComponent } from './components/animated-like/animated-like.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ScriptService } from '../script/script.service';
         BlobComponent,
         CirclesComponent,
         CheckboxComponent,
-        ButtonsComponent
+        ButtonsComponent,
+        AnimatedLikeComponent
     ],
     imports: [CommonModule, DatafetcherModule, ReactiveFormsModule],
     providers: [ScriptService],
@@ -38,7 +40,8 @@ import { ScriptService } from '../script/script.service';
         Style01Component,
         CirclesComponent,
         CheckboxComponent,
-        ButtonsComponent
+        ButtonsComponent,
+        AnimatedLikeComponent
     ]
 })
 export class SharedModule {}

@@ -1,0 +1,113 @@
+@import "../../styles.scss";
+@import "../../assets/css/bootstrap.css";
+
+
+a:hover {
+    text-decoration: none;
+  }
+  .price-wrap {
+    letter-spacing: -0.9px;
+  }
+  .icon-xs, .icon-sm, .icon-md, .icon-lg {
+    display: inline-block;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  
+  .icon-xs {
+    width: 32px;
+    height: 32px;
+    line-height: 32px !important;
+    font-size: 16px;
+  }
+  
+  .icon-sm {
+    width: 48px;
+    height: 48px;
+    line-height: 48px !important;
+    font-size: 20px;
+  }
+  
+  .icon-md {
+    width: 60px;
+    height: 60px;
+    line-height: 60px !important;
+    font-size: 28px;
+  }
+  
+  .icon-lg {
+    width: 96px;
+    height: 96px;
+    line-height: 96px !important;
+    font-size: 42px;
+  }
+  
+  .img-xs, .img-sm, .img-md, .img-lg {
+    -o-object-fit: cover;
+       object-fit: cover;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  
+  .img-xs {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .img-sm {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .img-md {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .img-lg {
+    width: 250px;
+    height: 250px;
+  }
+  .section-pagetop {
+    padding: 45px 0;
+  }
+  .padding-y {
+    padding-top: 40px;
+    padding-bottom: 40px;
+      }
+      .table-shopping-cart.table td, .table-shopping-cart.table th {
+        padding-left:4rem;
+        padding-right: 1.25rem;
+      }
+      .table-shopping-cart .price-wrap {
+        line-height: 1;
+        width: 180px;
+
+      }
+      .table-shopping-cart .price {
+        font-weight: bold;
+        margin-right: -20px;
+        display: block;
+      }
+      .table-shopping-cart .itemside .info {
+        padding: 10px;
+        display: inline-block;
+        font-size: medium;
+
+      }
+      .table-shopping-cart .itemside .title {
+        display: flex;
+        font-size: $fs-small;
+
+      }
+      .table-shopping-cart .itemside .aside {
+        display: flex;
+        
+
+      }
+      .section-content {
+        margin-left: 10%;
+      }
+     
+     

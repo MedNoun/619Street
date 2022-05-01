@@ -12,6 +12,8 @@ import * as registration from 'src/app/classes/fetchers/registration/content';
 import * as productView from 'src/app/classes/fetchers/productView/content';
 import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
 import { product } from 'src/app/classes/models/product';
+import *  as panier from 'src/app/classes/fetchers/panier/content';
+
 @Injectable()
 export class ApiService {
     private Url = 'http://localhost:3000/populator';
@@ -63,6 +65,11 @@ export class ApiService {
         const params = new HttpParams().set('opt', 1);
         return this.http
             .get<product>(this.Url + '/products', { params })
+            .pipe(catchError(this.handleError));
+    }
+    getPanier(): Observable<any> {
+        return this.http
+            .get<panier.content>(this.Url + '/panier')
             .pipe(catchError(this.handleError));
     }
 }
