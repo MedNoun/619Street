@@ -1,4 +1,3 @@
-
 <div class="product-container flex section">
     <div class="carousel-container">
         <app-carousel
@@ -17,15 +16,31 @@
             <div class="flex space-between title-container">
                 <div class="title">{{ product.name }}</div>
                 <div class="like">
-                    <img [src]="content.productView.likeLogo" alt="" />
+                    <i
+                        (click)="this.liked = this.liked * -1"
+                        class="fa-heart"
+                    ></i>
                 </div>
             </div>
             <div class="fix referance">Ref: {{ product.type }}</div>
             <div class="fix price">{{ product.price }} TND</div>
-            <div class="fix size-selection">Choose a size</div>
-            <div class="flex space-between sizes">
-                <div *ngFor="let size of product.sizes">
-                    {{ size }}
+            <div class="size">
+                <div class="fix size-selection">Choose size</div>
+
+                <div class="sizes">
+                    <span #size *ngFor="let item of product.sizes">{{
+                        item
+                    }}</span>
+                </div>
+            </div>
+            <div class="color">
+                <div class="fix size-selection">Choose Color</div>
+
+                <div class="colors">
+                    <span
+                        *ngFor="let item of product.colors"
+                        [style.background-color]="item"
+                    ></span>
                 </div>
             </div>
             <div class="button">

@@ -35,20 +35,65 @@
 .carousel-container {
     width: 50%;
 }
-
+.size,
+.color {
+    line-height: 1;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    transition: 0.5s;
+    z-index: 1;
+}
 .sizes {
-    width: 30%;
-    font-size: 30px;
-    margin-top: 20px;
-    div {
-        border-style: solid;
-        border-width: 1px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 3px;
-        padding-right: 3px;
+    display: flex;
+}
+.colors {
+    display: flex;
+}
+.color span {
+    width: 20px;
+    height: 20px;
+    font-size: $fs-small;
+    border-radius: 50%;
+    border: solid 5px transparent;
+    margin: 0 5px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.color {
+    span:hover,
+    span.active {
+        border: solid 5px $col-black;
     }
 }
+
+.size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    border: 1px solid $col-grey;
+    font-size: 14px;
+    display: inline-block;
+    color: $col-white;
+    background: $col-black;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.size {
+    span:hover,
+    span.active {
+        /* other bug */
+        background: $col-white;
+        border: 1px solid $col-black;
+        color: $col-black;
+    }
+}
+
 .title {
     font-weight: 900;
 
@@ -88,6 +133,7 @@
         overflow-x: hidden;
     }
     .details-container {
+        margin-top: 30px;
         justify-content: center;
     }
     .carousel-container {

@@ -45,7 +45,8 @@ const routes: Routes = [
                 path: 'product/:id',
                 component: ProductViewComponent,
                 resolve: { data: ProductResolverService }
-            }
+            },
+            { path: '**', redirectTo: '/homepage' }
         ]
     }
 ];
