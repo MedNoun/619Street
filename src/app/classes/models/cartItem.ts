@@ -1,5 +1,6 @@
 export class cartItem {
     id: string;
+    liked: number;
     name: string;
     type: string;
     size: number;

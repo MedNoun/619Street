@@ -40,18 +40,14 @@ export class CardComponent implements OnInit {
         this.router.navigateByUrl('product/' + this.card.id);
     }
     addToCart() {
-        this.inputs.id = this.card.id;
-        this.inputs.name = this.card.name;
-        this.inputs.type = this.card.type;
-        this.inputs.price = this.card.price;
-        this.inputs.size = this.inputs.size
-            ? this.inputs.size
-            : this.card.sizes[0];
-        this.inputs.color = this.inputs.color
+        const newItem = new cartItem();
+        this.cartService.copyObj(this.card, newItem);
+        newItem.size = this.inputs.size ? this.inputs.size : this.card.sizes[0];
+        newItem.color = this.inputs.color
             ? this.inputs.color
             : this.card.colors[0];
-        this.inputs.quantity = 1;
-        this.cartService.add(this.inputs);
-        this.submition.emit(this.inputs);
+        newItem.quantity = 1;
+        this.cartService.add(newItem);
+        this.submition.emit(newItem);
     }
 }

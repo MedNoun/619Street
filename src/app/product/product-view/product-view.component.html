@@ -5,9 +5,9 @@
             [text]="false"
             [ngStyle]="ngStyle"
             class="carousel"
-            [carousel]="content.carousel"
+            [carousel]="product.carousel"
             [auto]="true"
-            [interval]="5000"
+            [interval]="7000"
         ></app-carousel>
     </div>
 
@@ -15,9 +15,12 @@
         <div>
             <div class="flex space-between title-container">
                 <div class="title">{{ product.name }}</div>
-                <div class="like">
+                <div class="like" (click)="handleLike()">
                     <i
-                        (click)="this.liked = this.liked * -1"
+                        [ngClass]="{
+                            'fa-regular': liked === -1,
+                            'fa-solid': liked === 1
+                        }"
                         class="fa-heart"
                     ></i>
                 </div>
@@ -28,9 +31,13 @@
                 <div class="fix size-selection">Choose size</div>
 
                 <div class="sizes">
-                    <span #size *ngFor="let item of product.sizes">{{
-                        item
-                    }}</span>
+                    <span
+                        #size
+                        (click)="inputs.size = item"
+                        [ngClass]="inputs.size === item ? 'active' : ''"
+                        *ngFor="let item of product.sizes"
+                        >{{ item }}</span
+                    >
                 </div>
             </div>
             <div class="color">
@@ -39,12 +46,18 @@
                 <div class="colors">
                     <span
                         *ngFor="let item of product.colors"
+                        (click)="inputs.color = item"
+                        [ngClass]="inputs.color === item ? 'active' : ''"
                         [style.background-color]="item"
                     ></span>
                 </div>
             </div>
             <div class="button">
-                <input type="submit" value="ADD TO CART" />
+                <input
+                    (click)="addToCart()"
+                    type="submit"
+                    value="ADD TO CART"
+                />
             </div>
         </div>
     </div>

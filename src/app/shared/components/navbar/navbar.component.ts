@@ -28,14 +28,13 @@ export class NavbarComponent implements OnInit {
         }, 2000);
         setTimeout(() => {
             this.ad = -1;
-        }, 2200);
+        }, 1200);
     }
 
     ngOnInit(): void {
         //onchange of the current command
         this.orderService.onCurrentChange().subscribe((value) => {
             this.numberItems = value;
-
             this.animate();
         });
     }
