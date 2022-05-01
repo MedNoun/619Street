@@ -1,4 +1,4 @@
-export interface form {
-    title: string;
-    subtitle: string;
+export class form {
+    title: string = 'Join Us';
+    subtitle: string = 'Create your account';
 }

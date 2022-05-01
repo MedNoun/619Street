@@ -4,6 +4,6 @@ export interface card {
     type: string;
     url: string;
     price: number;
-    sizes: number[];
+    sizes: string[];
     colors: string[];
 }

@@ -3,7 +3,7 @@ export class cartItem {
     liked: number;
     name: string;
     type: string;
-    size: number;
+    size: string;
     color: string;
     price: number;
     quantity: number;

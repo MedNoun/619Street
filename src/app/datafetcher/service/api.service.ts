@@ -7,14 +7,13 @@ import {
 import { catchError, retry, tap } from 'rxjs/operators';
 import { content } from 'src/app/classes/fetchers/homepage/content';
 import { Observable, throwError } from 'rxjs';
-import * as login from 'src/app/classes/fetchers/login/content';
-import * as registration from 'src/app/classes/fetchers/registration/content';
 import * as productView from 'src/app/classes/fetchers/productView/content';
 import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
 import { product } from 'src/app/classes/models/product';
+import { shared } from 'src/app/classes/fetchers/shared/shared';
 @Injectable()
 export class ApiService {
-    private Url = 'http://localhost:3000/populator';
+    private Url = 'http://localhost:3000/api/front-server';
     constructor(private http: HttpClient) {}
     private handleError(error: HttpErrorResponse): any {
         if (error.error instanceof ErrorEvent) {
@@ -34,18 +33,7 @@ export class ApiService {
     }
     getShared(): Observable<any> {
         return this.http
-            .get<content>(this.Url + '/shared')
-            .pipe(catchError(this.handleError));
-    }
-    getLogin(): Observable<any> {
-        return this.http
-            .get<login.content>(this.Url + '/login')
-            .pipe(catchError(this.handleError));
-    }
-
-    getRegistration(): Observable<any> {
-        return this.http
-            .get<registration.content>(this.Url + '/registration')
+            .get<shared>(this.Url + '/shared')
             .pipe(catchError(this.handleError));
     }
 

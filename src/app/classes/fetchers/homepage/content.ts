@@ -6,7 +6,6 @@ import { slogan } from './slogan';
 
 export interface content {
     slogan: slogan;
-    navbar: navbar;
     carousel: carousel;
     cards: card[];
     footer: footer;

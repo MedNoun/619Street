@@ -5,18 +5,18 @@ import {
     RouterStateSnapshot
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { content } from 'src/app/classes/fetchers/registration/content';
+import { form } from 'src/app/classes/fetchers/registration/form';
 import { ApiService } from 'src/app/datafetcher/service/api.service';
 
 @Injectable({
     providedIn: 'root'
 })
-export class RegisterResolverService implements Resolve<content> {
+export class RegisterResolverService implements Resolve<form> {
     constructor(private readonly api: ApiService) {}
     resolve(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
-    ): content | Observable<content> | Promise<content> {
-        return this.api.getRegistration();
+    ): form | Observable<form> | Promise<form> {
+        return this.api.getShared();
     }
 }
