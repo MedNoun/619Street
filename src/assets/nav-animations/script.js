@@ -42,8 +42,8 @@ jQuery(function () {
                 callback: call,
                 defaults: {
                     color: "#99db81",
-                    minSpeed: 10,
-                    maxSpeed: 10
+                    minSpeed: 30,
+                    maxSpeed: 30
                 },
                 settings: {}
             };
@@ -144,7 +144,40 @@ jQuery(function () {
 
     var slider = new gooSlider("body");
     var l1, l2;
+    var scroll = $(document).scrollTop();
+    var navheight = $(".navbar").outerHeight();
+    var animate = true;
+
+    $(window).on("scroll", function () {
+        var scrolled = $(document).scrollTop();
+
+        if (animate === true) {
+            if (scrolled > 1) {
+                $(".navbar").addClass("isVisible");
+            } else {
+                $(".navbar").removeClass("isVisible");
+            }
+            if (scrolled > navheight) {
+                $(".navbar").addClass("animate");
+            } else {
+                $(".navbar").removeClass("animate");
+            }
+
+            if (scrolled > scroll) {
+                $(".navbar").removeClass("sticky");
+            } else {
+                $(".navbar").addClass("sticky");
+            }
+        }
+        scroll = $(document).scrollTop();
+    });
+    $(".fa-times").on("click", () => {
+        animate = true;
+    });
     $(".fa-bars").on("click", function () {
+        animate = false;
+        $(".base").addClass("hide-body");
+        $(".navbar").removeClass("animate");
         $("canvas").removeClass("unvisible");
         $("header").hide();
         $(".nav-items").fadeIn();
@@ -157,15 +190,17 @@ jQuery(function () {
         var c = "#e4e4e4";
         slider.wave(c, function () {});
 
+        $(".base").removeClass("hide-body");
+
         setTimeout(() => {
             $(".nav-items").fadeOut();
         });
         setTimeout(() => {
             $("canvas").addClass("unvisible");
-        }, 450);
+        }, 200);
         setTimeout(() => {
             $("header").fadeIn(600);
-        }, 450);
+        }, 200);
 
         //var c = "hsla(" + Math.floor(Math.random() * 7) * 50 + ",56%,68%,1);
     });

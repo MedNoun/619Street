@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
     ngAfterViewInit(): void {
         //external script loader
         this.scripty
-            .load('nav', 'perlin', 'navbar')
+            .load('nav', 'perlin')
             .then((data) => {
                 console.log('script loaded ', data);
             })

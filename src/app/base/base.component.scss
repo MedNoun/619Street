@@ -16,6 +16,10 @@ body {
         box-sizing: inherit;
     }
 }
+.hide-body {
+    height: 100vh;
+    overflow: hidden;
+}
 
 .navbar-container {
     position: absolute;

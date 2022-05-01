@@ -118,6 +118,15 @@ i.nav-item {
     width: 15vw;
     justify-content: space-between;
 }
+.canvas-container {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    bottom: 100px;
+    z-index: 1;
+    background-color: Black;
+}
 
 canvas {
     z-index: 2;
