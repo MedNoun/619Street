@@ -20,9 +20,10 @@ export interface row {
     arr: innerRow[];
 }
 
-export interface footer {
+export class footer {
     logo: string;
     socials: innerRow;
     adr: adr;
     rows: row[];
 }
+

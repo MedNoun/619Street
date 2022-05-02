@@ -1,4 +1,4 @@
-export interface card {
+export class card {
     id: string;
     name: string;
     type: string;
