@@ -3,7 +3,6 @@ import { footer } from '../shared/footer';
 import { navbar } from '../shared/navbar';
 
 export class catalogue {
-    navbar: navbar;
     filters: filter[];
     cards: card[];
     footer: footer;

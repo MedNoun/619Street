@@ -1,6 +1,6 @@
 export interface slogan {
     title: string;
     subtitle: string;
-    paragraphTitle: string;
+    paragrapheTitle: string;
     paragraph: string;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { content } from '../classes/fetchers/registration/content';
+import { form } from '../classes/fetchers/registration/form';
 
 @Component({
     selector: 'app-registration',
@@ -8,11 +8,7 @@ import { content } from '../classes/fetchers/registration/content';
     styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-    public content: content;
+    public content: form = new form();
     constructor(private readonly activatedRoute: ActivatedRoute) {}
-    ngOnInit(): void {
-        this.activatedRoute.data.subscribe((data: { content: content }) => {
-            this.content = data.content;
-        });
-    }
+    ngOnInit(): void {}
 }

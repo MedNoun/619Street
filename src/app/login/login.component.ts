@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { content } from '../classes/fetchers/login/content';
+import { form } from '../classes/fetchers/login/form';
 import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
@@ -9,11 +9,7 @@ import { ApiService } from '../datafetcher/service/api.service';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-    public content: content;
+    public content: form = new form();
     constructor(private readonly activatedRoute: ActivatedRoute) {}
-    ngOnInit(): void {
-        this.activatedRoute.data.subscribe((data: { content: content }) => {
-            this.content = data.content;
-        });
-    }
+    ngOnInit(): void {}
 }

@@ -33,19 +33,18 @@ const routes: Routes = [
             },
             {
                 path: 'login',
-                component: LoginComponent,
-                resolve: { content: LoginResolverService }
+                component: LoginComponent
             },
             {
                 path: 'register',
-                component: RegistrationComponent,
-                resolve: { content: RegisterResolverService }
+                component: RegistrationComponent
             },
             {
                 path: 'product/:id',
                 component: ProductViewComponent,
                 resolve: { data: ProductResolverService }
-            }
+            },
+            { path: '**', redirectTo: '/homepage' }
         ]
     }
 ];
