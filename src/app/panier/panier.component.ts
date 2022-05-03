@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { content } from '../classes/fetchers/panier/content';
+import { content, item, products } from '../classes/fetchers/panier/content';
 import { ApiService } from '../datafetcher/service/api.service';
 
 @Component({
@@ -9,6 +9,9 @@ import { ApiService } from '../datafetcher/service/api.service';
 })
 export class PanierComponent implements OnInit {
   public content: content;
+  public products: products = new products();
+  public item : item = new item();
+
     constructor(private api: ApiService) {
         api.getPanier().subscribe((value) => {
             this.content = value;
