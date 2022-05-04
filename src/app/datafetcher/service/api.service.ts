@@ -7,6 +7,7 @@ import * as login from 'src/app/classes/fetchers/login/content';
 import * as registration from 'src/app/classes/fetchers/registration/content';
 import * as productView from 'src/app/classes/fetchers/productView/content';
 import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
+import { wishlist } from 'src/app/classes/fetchers/wishlist/wishlist';
 @Injectable()
 export class ApiService {
     private Url = 'http://localhost:3000/populator';
@@ -47,6 +48,12 @@ export class ApiService {
     getProductVew(): Observable<any> {
         return this.http
             .get<productView.content>(this.Url + '/productView')
+            .pipe(catchError(this.handleError));
+    }
+
+    getWishlist(): Observable<any> {
+        return this.http
+            .get<wishlist>(this.Url + '/wishlist')
             .pipe(catchError(this.handleError));
     }
 }

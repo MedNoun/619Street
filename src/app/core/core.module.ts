@@ -5,6 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginModule } from '../login/login.module';
 import { CatalogueModule } from '../catalogue/catalogue.module';
 import { ProductModule } from '../product/product.module';
+import { WishlistModule } from '../wishlist/wishlist.module';
+import { CheckboxComponent } from '../shared/components/checkbox/checkbox.component';
 
 @NgModule({
     declarations: [],
@@ -14,14 +16,16 @@ import { ProductModule } from '../product/product.module';
         LoginModule,
         RegistrationModule,
         CatalogueModule,
-        ProductModule
+        ProductModule,
+        WishlistModule
     ],
     exports: [
         HomepageModule,
         LoginModule,
         RegistrationModule,
         CatalogueModule,
-        ProductModule
+        ProductModule,
+        WishlistModule
     ]
 })
 export class CoreModule {}
