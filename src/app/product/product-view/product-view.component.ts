@@ -31,7 +31,6 @@ export class ProductViewComponent implements OnInit {
         }
     }
 
-    
     ngOnInit(): void {
         this.activatedRoute.data.subscribe((data: { data: { products } }) => {
             this.product = _.find(data.data.products, {
@@ -43,6 +42,7 @@ export class ProductViewComponent implements OnInit {
             this.product,
             'id'
         );
+        console.log('index', index);
         index !== -1 ? (this.liked = 1) : (this.liked = -1);
     }
     addToCart() {

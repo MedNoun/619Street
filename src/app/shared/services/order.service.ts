@@ -73,9 +73,7 @@ export class OrderService {
     //wishlist operations
 
     like(item: product) {
-        const index: number = _.findIndex(this._wishlist, (e) => {
-            return item.id === e.id;
-        });
+        const index: number = this.findIndex(this.wishlist, item, 'id');
         if (index === -1) {
             this._wishlist.push(item);
             this.syncItems('wishlist', this._wishlist);
@@ -83,9 +81,10 @@ export class OrderService {
     }
     unlike(item: product) {
         const filteredList: product[] = this._wishlist.filter((e) => {
-            return e.id === item.id;
+            return e.id !== item.id;
         });
         this._wishlist = filteredList;
+        console.log(this.wishlist, 'wishlist ! ');
         this.syncItems('wishlist', this._wishlist);
     }
 
