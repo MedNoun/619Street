@@ -21,7 +21,7 @@ export class CatalogueResolverService implements Resolve<content> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): content | Observable<content> | Promise<content> {
-        return this.api.getCatalogue().pipe(
+        return this.api.get('/catalogue').pipe(
             map((catalogue) => {
                 return { ...this.populatorService.catalogue, ...catalogue };
             })

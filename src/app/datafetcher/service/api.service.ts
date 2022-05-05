@@ -1,57 +1,40 @@
-import { Injectable } from '@angular/core';
-import {
-    HttpClient,
-    HttpErrorResponse,
-    HttpParams
-} from '@angular/common/http';
-import { catchError, retry, tap } from 'rxjs/operators';
-import { content } from 'src/app/classes/fetchers/homepage/content';
-import { Observable, throwError } from 'rxjs';
-import * as productView from 'src/app/classes/fetchers/productView/content';
-import { catalogue } from 'src/app/classes/fetchers/catalogue/catalogue';
-import { product } from 'src/app/classes/models/product';
-import { shared } from 'src/app/classes/fetchers/shared/shared';
+import { Injectable } from "@angular/core";
+import { environment } from "../../../environments/environment";
+import { HttpHeaders, HttpClient, HttpParams } from "@angular/common/http";
+import { Observable, throwError } from "rxjs";
+
+import { JwtService } from "./jwt.service";
+import { catchError } from "rxjs/operators";
+
 @Injectable()
 export class ApiService {
-    private Url = 'http://localhost:3000/api/front-server';
-    constructor(private http: HttpClient) {}
-    private handleError(error: HttpErrorResponse): any {
-        if (error.error instanceof ErrorEvent) {
-            console.error('An error occurred:', error.error.message);
-        } else {
-            console.error(
-                `Backend returned code ${error.status}, ` +
-                    `body was: ${error.error}`
-            );
-        }
-        throw Error('Something bad happened; please try again later.');
-    }
-    getHomepage(): Observable<any> {
-        const homepageContent = this.http
-        .get<content>(this.Url + '/homepage')
-        .pipe(catchError(this.handleError));
-        return homepageContent
-    }
-    getShared(): Observable<any> {
-        return this.http
-            .get<shared>(this.Url + '/shared')
-            .pipe(catchError(this.handleError));
-    }
+  constructor(private http: HttpClient, private jwtService: JwtService) {}
 
-    getCatalogue(): Observable<any> {
-        return this.http.get<catalogue>(this.Url + '/catalogue');
-    }
+  private formatErrors(error: any) {
+    return throwError(error.error);
+  }
 
-    getProductVew(): Observable<any> {
-        return this.http
-            .get<productView.content>(this.Url + '/productView')
-            .pipe(catchError(this.handleError));
-    }
+  get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+    return this.http
+      .get(`${environment.api_url}${path}`, { params })
+      .pipe(catchError(this.formatErrors));
+  }
 
-    getProducts(): Observable<any> {
-        const params = new HttpParams().set('opt', 1);
-        return this.http
-            .get<product>(this.Url + '/products', { params })
-            .pipe(catchError(this.handleError));
-    }
+  put(path: string, body: Object = {}): Observable<any> {
+    return this.http
+      .put(`${environment.api_url}${path}`, JSON.stringify(body))
+      .pipe(catchError(this.formatErrors));
+  }
+
+  post(path: string, body: Object = {}): Observable<any> {
+    return this.http
+      .post(`${environment.api_url}${path}`, JSON.stringify(body))
+      .pipe(catchError(this.formatErrors));
+  }
+
+  delete(path): Observable<any> {
+    return this.http
+      .delete(`${environment.api_url}${path}`)
+      .pipe(catchError(this.formatErrors));
+  }
 }

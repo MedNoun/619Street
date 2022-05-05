@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
     ActivatedRouteSnapshot,
@@ -22,7 +23,8 @@ export class ProductResolverService implements Resolve<product[]> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): product[] | Observable<product[]> | Promise<product[]> {
-        return this.api.getProducts().pipe(
+        const params = new HttpParams().set('opt', 1);
+        return this.api.get('/products', params).pipe(
             catchError((e) => {
                 return this.populatorService.cards;
             })

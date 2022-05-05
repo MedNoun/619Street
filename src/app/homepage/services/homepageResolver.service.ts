@@ -21,7 +21,7 @@ export class HomepageResolverService implements Resolve<content> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): content | Observable<content> | Promise<content> {
-        return this.api.getHomepage().pipe(
+        return this.api.get('/homepage').pipe(
             map((homepage) => {
                 return { ...this.populatorService.homepage, ...homepage };
             })

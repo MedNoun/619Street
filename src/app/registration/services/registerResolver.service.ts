@@ -17,6 +17,6 @@ export class RegisterResolverService implements Resolve<form> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): form | Observable<form> | Promise<form> {
-        return this.api.getShared();
+        return this.api.get('/shared');
     }
 }

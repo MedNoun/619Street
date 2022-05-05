@@ -21,7 +21,7 @@ export class BaseResolverService implements Resolve<navbar> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): navbar | Observable<navbar> | Promise<navbar> {
-        return this.api.getShared().pipe(
+        return this.api.get('/shared').pipe(
             map((nav) => {
                 return { ...this.populatorService.navbar, ...nav };
             })
