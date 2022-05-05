@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { catalogue, footer, homepage, navbar } from './content';
+import { cards, catalogue, footer, homepage, navbar } from './content';
 
 @Injectable({
     providedIn: 'root'
@@ -8,6 +8,9 @@ export class PopulatorService {
     constructor() {}
     get navbar() {
         return navbar;
+    }
+    get cards() {
+        return cards;
     }
     get footer() {
         return footer;
