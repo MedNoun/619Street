@@ -27,9 +27,10 @@ export class ApiService {
         throw Error('Something bad happened; please try again later.');
     }
     getHomepage(): Observable<any> {
-        return this.http
-            .get<content>(this.Url + '/homepage')
-            .pipe(catchError(this.handleError));
+        const homepageContent = this.http
+        .get<content>(this.Url + '/homepage')
+        .pipe(catchError(this.handleError));
+        return homepageContent
     }
     getShared(): Observable<any> {
         return this.http
