@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+.navbar-container {
+    position: absolute;
+    width: 100vw;
+}
+.featured {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    .title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+.cards {
+    row-gap: 25px;
+    margin-top: 10vh;
+    column-gap: 4vw;
+}
+.carousel-container {
+    width: 50%;
+}
+@media (max-width: 800px) {
+    .carousel-container {
+        margin: 25vh 0 0 0;
+        width: 100vw;
+    }
+}

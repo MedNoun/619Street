@@ -1,0 +1,19 @@
+<app-navbar class="navbar-container" [navbar]="wishlist.navbar"></app-navbar>
+<!-- <div class="carousel-container">
+    <app-carousel
+        [indicators]="false"
+        [text]="false"
+        class="carousel"
+        [carousel]="wishlist.carousel"
+        [auto]="true"
+        [interval]="5000"
+    ></app-carousel>
+</div> -->
+<div class="container featured">
+    <app-style01 class="title" text="featured"></app-style01>
+    <div class="cards flex center wrap">
+        <app-card *ngFor="let itemCard of wishlist.cards" [card]="itemCard"></app-card>
+    </div>
+</div>
+
+<app-footer [footer]="wishlist.footer"></app-footer>
