@@ -1,0 +1,9 @@
+{
+  "productView": {
+    "productName": "LOREM IPSUM",
+    "likeLogo": "../../../assets/productViewImages/heart-svgrepo-com.svg",
+    "referance": "120129100",
+    "price": "99",
+    "sizes": ["23", "34", "36", "38"]
+  }
+}

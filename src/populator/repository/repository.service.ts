@@ -21,4 +21,7 @@ export class RepositoryService {
   findOnePopulate(id: string) {
     return { ...this.obj, ...this.readJson(id, "populate") };
   }
+  findOnePopulateLeight(id: string) {
+    return this.readJson(id, "populate");
+  }
 }

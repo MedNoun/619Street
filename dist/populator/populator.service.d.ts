@@ -7,6 +7,7 @@ export declare class PopulatorService {
     create(createPopulatorDto: CreatePopulatorDto): string;
     findAll(): string;
     findOne(id: string): any;
+    findOneLeight(id: string): any;
     update(id: number, updatePopulatorDto: UpdatePopulatorDto): string;
     remove(id: number): string;
 }

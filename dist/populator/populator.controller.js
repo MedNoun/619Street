@@ -27,8 +27,10 @@ let PopulatorController = class PopulatorController {
     findAll() {
         return this.populatorService.findAll();
     }
-    findOne(id) {
-        return this.populatorService.findOne(id);
+    findOne(id, opt) {
+        return opt
+            ? this.populatorService.findOneLeight(id)
+            : this.populatorService.findOne(id);
     }
     update(id, updatePopulatorDto) {
         return this.populatorService.update(+id, updatePopulatorDto);
@@ -53,8 +55,9 @@ __decorate([
 __decorate([
     (0, common_1.Get)(":id"),
     __param(0, (0, common_1.Param)("id")),
+    __param(1, (0, common_1.Query)("opt")),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], PopulatorController.prototype, "findOne", null);
 __decorate([

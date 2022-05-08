@@ -1,0 +1,16 @@
+{
+  "filters": [
+    {
+      "title": "Order By",
+      "items": ["Size", "Price", "In Stock", "Color"]
+    },
+    {
+      "title": "Categories",
+      "items": ["Bags", "Trausers", "Shirts", "Boots"]
+    },
+    {
+      "title": "Sizes",
+      "items": ["XS", "S", "M", "L", "XL", "XXL"]
+    }
+  ]
+}

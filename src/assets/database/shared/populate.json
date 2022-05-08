@@ -1,8 +1,125 @@
 {
+  "carousel": {
+    "images": [
+      {
+        "brand": "Hammadi Abid",
+        "description": "excelent for your body",
+        "src": "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2021&q=80",
+        "alt": "nature1"
+      },
+      {
+        "brand": "Nike",
+        "description": "excelent for your tirma",
+        "src": "https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "alt": "nature1"
+      },
+      {
+        "brand": "Hammadi Abid",
+        "description": "excelent for your body",
+        "src": "https://images.unsplash.com/photo-1478633637126-63a90b9d7e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "alt": "nature1"
+      },
+      {
+        "brand": "Nike",
+        "description": "excelent for your tirma",
+        "src": "https://images.unsplash.com/photo-1542594566-ba8e6fc0cf63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "alt": "nature1"
+      },
+      {
+        "brand": "Hammadi Abid",
+        "description": "excelent for your body",
+        "src": "https://images.unsplash.com/photo-1485218126466-34e6392ec754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+        "alt": "nature1"
+      }
+    ]
+  },
   "navbar": {
-    "brand": "619Street",
+    "brand": "619 Street",
     "items": ["Homme", "Femme", "New Collection"]
   },
+  "cards": [
+    {
+      "id": "1",
+      "name": "blow",
+      "type": "sneakers",
+      "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "2",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "3",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "4",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5446.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "5",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "6",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "7",
+      "name": "blow",
+      "type": "sneakers",
+      "url": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "8",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/boots/boots_PNG7781.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    },
+    {
+      "id": "9",
+      "name": "nikee",
+      "type": "sneakers",
+      "url": "https://pngimg.com/uploads/tshirt/tshirt_PNG5441.png",
+      "price": 35,
+      "sizes": [7, 8, 9, 10],
+      "colors": ["green", "blue", "yellow"]
+    }
+  ],
   "footer": {
     "logo": "619 Street",
     "socials": {

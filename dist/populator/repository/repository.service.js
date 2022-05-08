@@ -29,6 +29,9 @@ let RepositoryService = class RepositoryService {
     findOnePopulate(id) {
         return Object.assign(Object.assign({}, this.obj), this.readJson(id, "populate"));
     }
+    findOnePopulateLeight(id) {
+        return this.readJson(id, "populate");
+    }
 };
 RepositoryService = __decorate([
     (0, common_1.Injectable)(),
