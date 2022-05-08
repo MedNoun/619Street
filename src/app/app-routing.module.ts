@@ -12,6 +12,7 @@ import { BaseComponent } from './base/base.component';
 import { BaseResolverService } from './base/services/base-resolver.service';
 import { LoginResolverService } from './login/services/loginResolver.service';
 import { RegisterResolverService } from './registration/services/registerResolver.service';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
     {
@@ -38,11 +39,15 @@ const routes: Routes = [
             {
                 path: 'register',
                 component: RegistrationComponent
-            },
+            },  
             {
                 path: 'product/:id',
                 component: ProductViewComponent,
                 resolve: { data: ProductResolverService }
+            },
+            {
+                path: 'wishlist',
+                component: WishlistComponent
             },
             { path: '**', redirectTo: '/homepage' }
         ]
