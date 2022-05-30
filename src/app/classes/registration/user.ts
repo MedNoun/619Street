@@ -1,7 +1,7 @@
 
 export class user {
-    userName: String;
-    lastName: String;
+    username: String;
+    lastname: String;
     email: String;
     phoneNumber: Number;
     Address: String;
