@@ -23,14 +23,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of products.items">
+                            <tr *ngFor="let item of products">
                                 <td>
                                     <figure class="itemside">
                                         <div class="aside">
                                             <img
-                                                src="{{"
-                                                item.url
-                                                }}
+                                                src="{{ item.url }}"
                                                 class="img-sm"
                                             />
                                         </div>
