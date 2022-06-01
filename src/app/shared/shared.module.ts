@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScriptService } from '../script/script.service';
 import { AngularTiltModule } from 'angular-tilt';
 import { OrderService } from './services/order.service';
+import { AnimatedLikeComponent } from './components/animated-like/animated-like.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { OrderService } from './services/order.service';
         BlobComponent,
         CirclesComponent,
         CheckboxComponent,
-        ButtonsComponent
+        ButtonsComponent,
+        AnimatedLikeComponent
     ],
     imports: [
         CommonModule,
@@ -46,7 +48,8 @@ import { OrderService } from './services/order.service';
         Style01Component,
         CirclesComponent,
         CheckboxComponent,
-        ButtonsComponent
+        ButtonsComponent,
+        AnimatedLikeComponent
     ]
 })
 export class SharedModule {}

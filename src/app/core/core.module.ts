@@ -7,6 +7,7 @@ import { CatalogueModule } from '../catalogue/catalogue.module';
 import { ProductModule } from '../product/product.module';
 import { BaseModule } from '../base/base.module';
 import { WishlistModule } from '../wishlist/wishlist.module';
+import { PanierModule } from '../panier/panier.module';
 
 @NgModule({
     declarations: [],
@@ -18,7 +19,8 @@ import { WishlistModule } from '../wishlist/wishlist.module';
         CatalogueModule,
         ProductModule,
         BaseModule,
-        WishlistModule
+        WishlistModule,
+        PanierModule
     ],
     exports: [
         SharedModule,
@@ -28,7 +30,8 @@ import { WishlistModule } from '../wishlist/wishlist.module';
         RegistrationModule,
         CatalogueModule,
         ProductModule,
-        WishlistModule
+        WishlistModule,
+        PanierModule
     ]
 })
 export class CoreModule {}
